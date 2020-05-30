@@ -1,0 +1,81 @@
+$f-consolas: "consolas";
+
+.services, .asortiment {
+    padding-top: 150px;
+
+    &-menu {
+        font-family: $f-consolas;
+        font-weight: 100;
+
+        &-active {
+            color: #000;
+        }
+
+        ul {
+            li {
+                a {
+                }
+            }
+        }
+    }
+
+    &-list-items {
+        font-family: $f-consolas;
+        &-active {
+            color: #2e4914 !important;
+        }
+        ul {
+            li {
+                .link {
+                    display: inline-block;
+                    color: #333333;
+                }
+
+                a {
+                }
+            }
+        }
+    }
+
+    &-box {
+        padding: 30px;
+        border: 1px solid #2e4914;
+        border-radius: 1em;
+
+        &__img {
+            background-repeat: no-repeat !important;
+            background-size: cover;
+            background-position: center;
+            border-radius: 1em;
+            height: 400px;
+            width: 100%;
+        }
+
+        &__desc {
+            font-family: $f-consolas;
+            overflow: hidden;
+
+            ::-webkit-scrollbar {
+                width: 0.3em;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background-color: #2e491482;
+            }
+
+            ::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(230, 116, 48, 0.05);
+            }
+
+            &_scroll {
+                height: 260px;
+                overflow-y: scroll;
+
+                p {
+                    font-size: 20px;
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}

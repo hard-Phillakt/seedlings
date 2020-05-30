@@ -1,0 +1,46 @@
+$f-consolas: "Consolas";
+
+.button {
+    &-learn-more {
+        display: inline-flex;
+        border: 1px solid #f2f5db;
+        padding: 3px;
+        border-radius: 5em;
+
+        &__a {
+            display: inline-flex;
+            background: #f2f5db;
+            padding: 10px;
+            border-radius: 5em;
+        }
+    }
+
+    &-rub {
+        font-family: $f-consolas;
+        border-radius: 5em;
+        border: 1px solid #2e4914;
+        padding: 3px 0px;
+
+        span {
+            display: inline-flex;
+            color: #f2f5db;
+            background: #2e4914;
+            font-size: 22px;
+            padding: 10px;
+            border-radius: 5em;
+            margin-left: 5px;
+        }
+    }
+
+    &:hover {
+        outline: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        outline: none;
+    }
+}

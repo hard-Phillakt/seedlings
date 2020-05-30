@@ -1,0 +1,40 @@
+$f-boomboom: "Boomboom";
+
+.title {
+    &__h1 {
+        font-family: $f-boomboom;
+        font-weight: 100;
+        text-shadow: #000 3px 1px 10px;
+
+        @media (max-width: 1366px) and (min-width: 992px) {
+        }
+        @media (max-width: 991px) and (min-width: 768px) {
+        }
+        @media (max-width: 767px) and (min-width: 200px) {
+        }
+    }
+
+    &__h2 {
+        font-family: $f-boomboom;
+        font-weight: 100;
+
+        @media (max-width: 1366px) and (min-width: 992px) {
+        }
+        @media (max-width: 991px) and (min-width: 768px) {
+        }
+        @media (max-width: 767px) and (min-width: 200px) {
+        }
+    }
+
+    &__h3 {
+        font-family: $f-boomboom;
+        font-weight: 100;
+
+        @media (max-width: 1366px) and (min-width: 992px) {
+        }
+        @media (max-width: 991px) and (min-width: 768px) {
+        }
+        @media (max-width: 767px) and (min-width: 200px) {
+        }
+    }
+}

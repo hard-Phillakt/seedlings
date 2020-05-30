@@ -1,0 +1,49 @@
+
+$LakesB: 'TT Lakes Bold';
+
+.form-request {
+    
+    @media (max-width: 1366px) and (min-width: 992px){
+
+    }
+    @media (max-width: 991px) and (min-width: 768px){
+        flex-direction: column;
+    }
+    @media (max-width: 767px){
+        flex-direction: column;
+    }
+
+
+    .field-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.field  {
+    font-family: $LakesB;
+    border: 1px solid #bdc3c7;
+    transition: all .3s ease-in-out;
+    
+    &:hover {
+
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0px 0px 10px #ecf0f1;
+    }
+
+    &__w {
+
+        &_400 {
+            width: 400px;
+            margin-right: 30px;
+
+            @media (max-width: 767px){
+                width: auto;
+                margin-right: 0;
+            }
+        }
+    }
+}

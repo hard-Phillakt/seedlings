@@ -1,0 +1,27 @@
+
+// $c-green-b: #2E4914;
+$c-green-b: #2e491482;
+$f-consolas: 'Consolas';
+
+.menu {
+    font-family: $f-consolas;
+    background: $c-green-b;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    
+    &-wrap {
+
+    }
+
+    &-nav {
+        
+        &__ul {
+
+            &_li {
+                margin: 0 15px;
+            }
+        }
+    }
+}

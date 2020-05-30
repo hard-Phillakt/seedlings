@@ -1,0 +1,26 @@
+
+.main {
+    // height: 100vh;
+    padding-top: 90px;
+
+    &-bg {
+        display: flex;
+        align-items: center;
+        background: url("../Main/img/main.png") no-repeat;
+        background-size: cover;
+        height: 485px;
+        border-bottom: 6px solid #2E4914;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: #F2F5DB;
+            height: 7px;
+        }
+    }
+}
