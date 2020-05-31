@@ -10,6 +10,7 @@ import '../Ui/fs/index.scss';
 import '../Ui/title/index.scss';
 import '../Ui/link/index.scss';
 import '../Ui/description/index.scss';
+import '../Ui/form/index.scss';
 
 //  My Ui components fonts
 import '../Ui/fonts/Boomboom/index.css';
@@ -25,6 +26,8 @@ import Main from '../Layers/Main/Main';
 import Slider from '../Layers/Slider/Slider';
 import Asortiment from '../Layers/Asortiment/Asortiment';
 import Services from '../Layers/Services/Services';
+import Product from '../Layers/Product/Product';
+import Modal from '../../components/Modal/Modal';
 
 
 class App extends React.Component {
@@ -38,7 +41,9 @@ class App extends React.Component {
                     <Main />
                     <Slider />
                     <Asortiment />
+                    <Product />
                     <Services />
+                    <Modal />
                 </section>
             </section>
         )

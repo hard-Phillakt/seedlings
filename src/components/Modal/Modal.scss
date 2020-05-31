@@ -1,0 +1,38 @@
+
+.modal-wrapp {
+    display: flex;
+    align-items: center;
+    background: rgba(46, 73, 20, 0.66);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all .3s ease-in-out;
+}
+
+.modal-hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-border {
+    margin-top: 100px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    background: #F2F5DB;
+    border-radius: 26px;
+}
+
+.modal {
+    border: 1px solid #2E4914;
+    background: #F2F5DB;
+    border-radius: 26px;
+}
