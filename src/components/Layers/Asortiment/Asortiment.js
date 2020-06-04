@@ -1,6 +1,9 @@
 import React from 'react';
 import './Asortiment.scss';
 
+import { connect } from 'react-redux';
+import deltaLayer from '../../../actions/layers';
+
 import walnut from './Walnut/img/walnut__item_1.png';
 // import hazelnut from './Hazelnut/img/hazelnut__item_1.png';
 // import applePear from './Apple-Pear/img/apple-pear__item_1.png';
@@ -8,14 +11,13 @@ import walnut from './Walnut/img/walnut__item_1.png';
 
 import ButtonRub from '../../Ui/button/ButtonRub';
 
-const asortiment = () => {
-
-
+const asortiment = (props) => {
+    
     return (
         <section className="asortiment">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-6 flex-stretching">
+                    <div className="col-lg-6 flex-stretching" onWheel={(e) => (props.onDeltaYhandler(e))}>
 
                         <div>
                             <h3 className="title title__h3 fs-30 c-green-b">Ассортимент. Саженцы</h3>
@@ -58,6 +60,7 @@ const asortiment = () => {
                                     </ul>
                                 </nav>
                             </div>
+
                         </div>
 
                         <div className="row">
@@ -111,4 +114,19 @@ const asortiment = () => {
     )
 }
 
-export default asortiment;
+
+const mapStateToProps = (state) => {
+    return {...state}
+}
+
+const mapDispatchToProps = (dispatch) => {
+
+    return {
+        onDeltaYhandler: (param) => {
+            dispatch(deltaLayer(param.deltaY));
+        }
+    }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(asortiment);

@@ -1,8 +1,45 @@
 $f-consolas: "consolas";
 
-.product, .services, .asortiment {
-    // height: 100vh;
+.asortiment {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    background: #fff;
+}
+
+.product {
+    height: 100vh;
     padding-top: 150px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    background: #fff;
+}
+
+.services {
+    height: 100vh;
+    padding-top: 150px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background: #fff;
+}
+
+.product,
+.services,
+.asortiment {
+    height: 100vh;
+    padding-top: 150px;
+
 
     &-menu {
         font-family: $f-consolas;

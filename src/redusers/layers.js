@@ -1,12 +1,61 @@
 
 const initState = {
-    count: 0
+    count: 0,
+    layers: [0, 1, 2, 3, 4]
 }
 
-const layers = (state = initState) => {
+const layers = (state = initState, action) => {
+
+    switch (action.type) {
+        case 'DELTA_Y':
+
+            const num = action.param;
+
+            switch (num) {
+                case 100:
+
+                    if (state.count >= 4) {
+                        return {
+                            ...state,
+                            count: 0
+                        }
+                    }
+
+                    return {
+                        ...state,
+                        count: state.count + 1
+                    }
 
 
-    return state;
+                case -100:
+
+                    if (state.count <= 0) {
+                        return {
+                            ...state,
+                            count: 4
+                        }
+                    }
+
+                    return {
+                        ...state,
+                        count: state.count - 1
+                    }
+            }
+
+
+        case 'TOGGLE_LAYERS':
+
+            return {
+                ...state,
+                count: action.param
+            }
+
+    }
+
+
+    return {
+        ...state
+    }
 }
 
 export default layers;

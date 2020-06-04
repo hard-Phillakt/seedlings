@@ -1,4 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import gsap from "gsap";
+
+import deltaLayer from '../../actions/layers';
+
+
 import './App.scss';
 import '../../../node_modules/bootstrap-4-grid/css/grid.min.css';
 
@@ -28,26 +34,71 @@ import Asortiment from '../Layers/Asortiment/Asortiment';
 import Services from '../Layers/Services/Services';
 import Product from '../Layers/Product/Product';
 import Modal from '../../components/Modal/Modal';
+import Dots from '../../components/Dots/Dots';
 
 
 class App extends React.Component {
 
+    constructor(props){
+        super(props);
+
+        this.refLayers = React.createRef(); 
+    }
+
+
+    onScrollhandler(layers){
+
+        if(layers){
+
+            const layersArr = layers.childNodes;
+            const count = this.props.layers.count;
+
+            gsap.to(layersArr[count], {y: `0%`, duration: .6, opacity: 1, display: 'block'});
+
+            for (let i = 0; i < layersArr.length; i++) {
+        
+                if(count !== i){
+                    gsap.to(layersArr[i], {y: `100%`, duration: .6, opacity: 0, display: 'none'});
+                }
+
+            }
+        }
+
+    }
+
     render() {
+
+        this.onScrollhandler(this.refLayers.current)
 
         return (
             <section className="App">
                 <Menu />
-                <section className="all-layers">
+                {/* <section className="all-layers" ref={this.refLayers} onScroll={(e) => (this.props.onDeltaYhandler(e))}> */}
+                <section className="all-layers" ref={this.refLayers} >
                     <Main />
                     <Slider />
                     <Asortiment />
                     <Product />
                     <Services />
-                    <Modal />
                 </section>
+                <Modal />
+                <Dots />
             </section>
         )
     }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+    return {...state}
+}
+
+const mapDispatchToProps = (dispatch) => {
+
+    return {
+        onDeltaYhandler: (param) => {
+            dispatch(deltaLayer(param.deltaY));
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -5,14 +5,16 @@ $f-consolas: 'Consolas';
 
 .menu {
     font-family: $f-consolas;
-    background: $c-green-b;
+    // background: $c-green-b;
+    background: #2e4914bf;
     position: fixed;
     left: 0;
+    top: 0;
     right: 0;
-    z-index: 999;
+    z-index: 9999;
     
     &-wrap {
-
+        padding: 14px 0;
     }
 
     &-nav {

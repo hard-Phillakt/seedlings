@@ -9,7 +9,7 @@ const menu = () => {
 
     return (
         <section className="menu">
-            <div className="menu-wrap pt-10 pb-10">
+            <div className="menu-wrap">
                 <div className="container">
                     <div className="row align-items-center">
 

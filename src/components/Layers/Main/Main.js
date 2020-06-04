@@ -1,11 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import deltaLayer from '../../../actions/layers';
 import '../Main/Main.scss';
 
-const main = () => {
-
+const main = (props) => {
 
     return (
-        <section className="main">
+        <section className="main" onWheel={(e) => (props.onDeltaYhandler(e))}>
             <div className="main-bg">
                 <div className="container">
                     <div className="row">
@@ -37,4 +38,17 @@ const main = () => {
     );
 }
 
-export default main;
+const mapStateToProps = (state) => {
+    return {...state}
+}
+
+const mapDispatchToProps = (dispatch) => {
+
+    return {
+        onDeltaYhandler: (param) => {
+            dispatch(deltaLayer(param.deltaY));
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(main);

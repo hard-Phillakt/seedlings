@@ -1,11 +1,18 @@
 
+::-webkit-scrollbar { /* chrome based */
+    width: 0px;  /* ширина scrollbar'a */
+    background: transparent;  /* опционально */
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    height: 9000px;
+    // height: 9000px;
+    // overflow-y: hidden;
+    // height: 100vh;
 }
 
 ul {
@@ -55,6 +62,7 @@ input,textarea, button {
 
 .all-layers {
     // padding-top: 108px;
+    position: relative;
 }
 
 .tac {
