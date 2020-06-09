@@ -1,15 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import deltaLayer from '../../../actions/layers';
 import './Slider.css';
 import './slider-init';
 import item_1 from './img/slider__item_1.png';
 import item_2 from './img/slider__item_2.png';
 
 
-const slider = () => {
+const slider = (props) => {
 
 
     return (
-        <section className="slider">
+        <section className="slider" onWheel={(e) => (props.onDeltaYhandler(e))}>
             <div className="swiper-container" data-swiper-parallax="-25%">
                 <div className="swiper-wrapper">
                     <div className="swiper-slide" style={{ backgroundImage: `url(${item_1})` }}>
@@ -61,4 +63,19 @@ const slider = () => {
     )
 }
 
-export default slider;
+
+const mapStateToProps = (state) => {
+    return {...state}
+}
+
+const mapDispatchToProps = (dispatch) => {
+
+    return {
+        onDeltaYhandler: (param) => {
+            dispatch(deltaLayer(param.deltaY));
+        }
+    }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(slider);

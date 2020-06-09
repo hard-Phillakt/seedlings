@@ -1,64 +1,74 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
+import deltaLayer from '../../../actions/layers';
+import getProdItemId from '../../../actions/getProdItemId';
+import getProdSelect from '../../../actions/getProdSelect';
+
 import './Product.scss';
-import prodwalnutOne from './img/walnut/walnut__item_1.png';
+import prodwalnutOneImg from './img/walnut/walnut__item_1.png';
 import ButtonRub from '../../Ui/button/ButtonRub';
 
-const product = () => {
 
+class Product extends React.Component {
+    constructor(props) {
+        super(props)
+    }
 
-    return (
-        <section className="product">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-6 flex-stretching">
+    render() {
 
-                        <div>
-                            <div className="row">
-                                <div className="col-lg-6">
-                                    <h3 className="title title__h3 fs-30 c-green-b">Продукция</h3>
+        return (
+            <section className="product">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6 flex-stretching" onWheel={(e) => (this.props.onDeltaYhandler(e))}>
+
+                            <div>
+                                <div className="row">
+                                    <div className="col-lg-6">
+                                        <h3 className="title title__h3 fs-30 c-green-b">Продукция</h3>
+                                    </div>
+                                </div>
+
+                                <div className="mt-90">
+                                    <div className="asortiment-box__desc_scroll asortiment-list-items">
+
+                                        <ul>
+                                            {
+                                                this.props.assort.getItemSelect.map((item, i) => {
+                                                    return (
+                                                        <li key={i}>
+                                                            <a href="#!" onClick={() => (this.props.getProdSelectIdHandler(item.title))} className="link mb-20 c-green-b mr-20 fs-24 asortiment-list-items-active">
+                                                                {item.title}
+                                                            </a>
+                                                        </li>
+                                                    )
+                                                })
+                                            }
+                                        </ul>
+
+                                    </div>
                                 </div>
                             </div>
 
-                            <div className="mt-90">
-                                <nav className="asortiment-list-items">
-                                    <ul className="">
-                                        <li>
-                                            <a href="#!" className="link mb-20 c-green-b mr-20 fs-24 asortiment-list-items-active">Песчанский (Peschanscii)</a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" className="link mb-20 mr-20 fs-24">Милотай интенсив (Milotai intensive)</a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" className="link mb-20 mr-20 fs-24">Милотай интенсив (Milotai intensive)</a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" className="link mb-20 mr-20 fs-24">Милотай интенсив (Milotai intensive)</a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" className="link mb-20 mr-20 fs-24">Милотай интенсив (Milotai intensive)</a>
-                                        </li>
-                                    </ul>
-                                </nav>
+                            <div className="row">
+                                <div className="col-lg-7">
+                                    <ButtonRub />
+                                </div>
                             </div>
+
                         </div>
 
-                        <div className="row">
-                            <div className="col-lg-7">
-                                <ButtonRub />
-                            </div>
-                        </div>
+                        <div className="col-lg-6">
+                            <div className="product-box">
+                                <div className="product-box__img img-res" style={{ backgroundImage: `url(${this.props.assort.getItemsSelectId.img})` }}>
 
-                    </div>
+                                </div>
 
-                    <div className="col-lg-6">
-                        <div className="product-box">
-                            <div className="product-box__img img-res" style={{ backgroundImage: `url(${prodwalnutOne})` }}>
-
-                            </div>
-
-                            <div className="asortiment-box__desc">
-                                <div className="asortiment-box__desc_scroll mt-30">
-                                    <p className="c-green-b">
+                                <div className="asortiment-box__desc">
+                                    <div className="asortiment-box__desc_scroll mt-30">
+                                        {this.props.assort.getItemsSelectId.text}
+                                        {/* <p className="c-green-b">
                                         Описание растения:
                                     </p>
                                     Дерево средних размеров, крона округлой формы, средней густоты.
@@ -82,15 +92,37 @@ const product = () => {
                                     1 декада октября. Сорт засухоустойчивый, жаростойкий, зимостойкий,
                                     при -30С, подмерзали только верхушки невызревших побегов.
                                     Периодичность плодоношения не выражена. Устойчивость к марсониозу
-                                    выше средней.
+                                    выше средней. */}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    )
+            </section>
+
+        )
+    }
 }
 
-export default product;
+
+const mapStateToProps = (state) => {
+    return { ...state }
+}
+
+const mapDispatchToProps = (dispatch) => {
+
+    return {
+        onDeltaYhandler: (param) => {
+            dispatch(deltaLayer(param.deltaY));
+        },
+        getProdItemsIdHandler: (param) => {
+            dispatch(getProdItemId(param));
+        },
+        getProdSelectIdHandler: (param) => {
+            dispatch(getProdSelect(param));
+        },
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Product);
