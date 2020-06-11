@@ -1,11 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import './Menu.scss'
 import logo from './img/logo.svg';
 import email from './icons/email.svg';
 import phone from './icons/phone.svg';
 
+import toggleLayers from '../../../actions/toggleLayers';
+import viewModal from '../../../actions/viewModal';
 
-const menu = () => {
+const menu = (props) => {
+
+    console.log(props);
+    
 
     return (
         <section className="menu">
@@ -21,17 +27,17 @@ const menu = () => {
                             <nav className="menu-nav">
                                 <ul className="menu-nav__ul fjc-c fai-c">
                                     <li className="menu-nav__ul_li">
-                                        <a className="link c-green fs-14" href="#!">Ассортимент</a>
+                                        <a className="link c-green fs-14" href="#!" onClick={() => (props.onToggleLayersHandler(2))}>Ассортимент</a>
                                     </li>
                                     <li className="menu-nav__ul_li">
-                                        <a className="link c-green fs-14" href="#!">Продукция</a>
+                                        <a className="link c-green fs-14" href="#!" onClick={() => (props.onToggleLayersHandler(3))}>Продукция</a>
                                     </li>
                                     <li className="menu-nav__ul_li">
-                                        <a className="link c-green fs-14" href="#!">Услуги</a>
+                                        <a className="link c-green fs-14" href="#!" onClick={() => (props.onToggleLayersHandler(4))}>Услуги</a>
                                     </li>
-                                    <li className="menu-nav__ul_li">
+                                    {/* <li className="menu-nav__ul_li">
                                         <a className="link c-green fs-14" href="#!">Товары для сада</a>
-                                    </li>
+                                    </li> */}
                                 </ul>
                             </nav>
                         </div>
@@ -52,8 +58,8 @@ const menu = () => {
                         </div>
 
                         <div className="col-lg-4">
-                            <div className="button">
-                                <span className="button-learn-more">
+                            <div className="button" onClick={() => (props.onViewModalHandler())}>
+                                <span className="button-learn-more" >
                                 {/* pt-10 pb-10 pr-10 pl-10 */}
                                     <a href="#!" className="button-learn-more__a c-green-b fs-14">Свяжитесь с нами, чтобы узнать больше</a>
                                 </span>
@@ -67,4 +73,23 @@ const menu = () => {
     );
 }
 
-export default menu;
+const mapStateToProps = (state) => {
+    return {
+        ...state
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+
+    return {
+        onToggleLayersHandler: (param) => {
+
+            dispatch(toggleLayers(param));
+        },
+        onViewModalHandler: (param) => {
+            dispatch(viewModal(param));
+        },
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(menu);

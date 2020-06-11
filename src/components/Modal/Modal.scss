@@ -8,7 +8,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 10000;
     transition: all .3s ease-in-out;
 }
 
@@ -35,4 +35,15 @@
     border: 1px solid #2E4914;
     background: #F2F5DB;
     border-radius: 26px;
+}
+
+.modal-times {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.modal-times img {
+    width: 30px;
 }

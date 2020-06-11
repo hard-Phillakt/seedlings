@@ -13,13 +13,8 @@ import ButtonRub from '../../Ui/button/ButtonRub';
 class Asortiment extends React.Component {
     constructor(props) {
         super(props);
-
-        console.log('Asortiment: ', props);
-
         this.menu = this.props.assort.menu;
-        // this.items = this.props.assort.items;
     }
-
 
     //  Выводим по умолчанию категорию walnut
     ifGetItems(param) {

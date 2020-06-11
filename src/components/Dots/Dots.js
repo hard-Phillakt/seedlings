@@ -21,10 +21,10 @@ const dots = (props) => {
 
                             {
                                 item === props.layers.count
-                                    ?
-                                    (<a href="#!" className="dots-link__active" onClick={() => (props.onToggleLayersHandler(item))}></a>)
-                                    :
-                                    (<a href="#!" onClick={() => (props.onToggleLayersHandler(item))}></a>)
+                                ?
+                                (<a href="#!" className="dots-link__active" onClick={() => (props.onToggleLayersHandler(item))}></a>)
+                                :
+                                (<a href="#!" onClick={() => (props.onToggleLayersHandler(item))}></a>)
                             }
 
                         </li>

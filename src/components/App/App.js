@@ -4,7 +4,6 @@ import gsap from "gsap";
 
 import deltaLayer from '../../actions/layers';
 
-
 import './App.scss';
 import '../../../node_modules/bootstrap-4-grid/css/grid.min.css';
 
@@ -17,6 +16,7 @@ import '../Ui/title/index.scss';
 import '../Ui/link/index.scss';
 import '../Ui/description/index.scss';
 import '../Ui/form/index.scss';
+import '../Ui/link/index.scss';
 
 //  My Ui components fonts
 import '../Ui/fonts/Boomboom/index.css';
