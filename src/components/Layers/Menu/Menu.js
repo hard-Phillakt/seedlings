@@ -1,6 +1,9 @@
 import React from 'react';
+
 import { connect } from 'react-redux';
+
 import './Menu.scss'
+
 import logo from './img/logo.svg';
 import email from './icons/email.svg';
 import phone from './icons/phone.svg';
@@ -20,24 +23,21 @@ const menu = (props) => {
                     <div className="row align-items-center">
 
                         <div className="col-lg-1">
-                            <img src={logo} alt="logo" />
+                            <a href="/"><img src={logo} alt="logo" /></a>
                         </div>
 
                         <div className="col-lg-5">
                             <nav className="menu-nav">
                                 <ul className="menu-nav__ul fjc-c fai-c">
                                     <li className="menu-nav__ul_li">
-                                        <a className="link c-green fs-14" href="#!" onClick={() => (props.onToggleLayersHandler(2))}>Ассортимент</a>
+                                        <a className={ props.layers.count === 2 ? 'link c-green fs-14 menu-active' : 'link c-green fs-14' } href="#!" onClick={() => (props.onToggleLayersHandler(2))}>Ассортимент</a>
                                     </li>
                                     <li className="menu-nav__ul_li">
-                                        <a className="link c-green fs-14" href="#!" onClick={() => (props.onToggleLayersHandler(3))}>Продукция</a>
+                                        <a className={ props.layers.count === 3 ? 'link c-green fs-14 menu-active' : 'link c-green fs-14' } href="#!" onClick={() => (props.onToggleLayersHandler(3))}>Продукция</a>
                                     </li>
                                     <li className="menu-nav__ul_li">
-                                        <a className="link c-green fs-14" href="#!" onClick={() => (props.onToggleLayersHandler(4))}>Услуги</a>
+                                        <a className={ props.layers.count === 4 ? 'link c-green fs-14 menu-active' : 'link c-green fs-14' } href="#!" onClick={() => (props.onToggleLayersHandler(4))}>Услуги</a>
                                     </li>
-                                    {/* <li className="menu-nav__ul_li">
-                                        <a className="link c-green fs-14" href="#!">Товары для сада</a>
-                                    </li> */}
                                 </ul>
                             </nav>
                         </div>

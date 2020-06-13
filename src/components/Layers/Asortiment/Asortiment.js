@@ -4,6 +4,7 @@ import './Asortiment.scss';
 // import MenuProd from './MenuProd/MenuProd';
 
 import { connect } from 'react-redux';
+
 import deltaLayer from '../../../actions/layers';
 import getProdItem from '../../../actions/getProdItem';
 import getProdItemId from '../../../actions/getProdItemId';
@@ -28,7 +29,7 @@ class Asortiment extends React.Component {
             this.props.assort.getItems.map((item, i) => {
                 return (
                     <li key={i}>
-                        <a href="#!" onClick={() => (this.props.getProdItemsIdHandler(item.title))} className="link mb-20 c-green-b mr-20 fs-24 asortiment-list-items-active">
+                        <a href="#!" onClick={() => (this.props.getProdItemsIdHandler(item.title))} className={ item.active ? 'link mb-20 c-green-b mr-20 fs-24 asortiment-list-items-active' : 'link mb-20 mr-20 fs-24'}>
                             {item.title}
                         </a>
                     </li>
@@ -40,11 +41,14 @@ class Asortiment extends React.Component {
 
     render() {
 
+        console.log(this.props.assort.getItems);
+        
+
         return (
             <section className="asortiment">
                 <div className="container">
                     <div className="row">
-                        
+
                         <div className="col-lg-6 flex-stretching" onWheel={(e) => (this.props.onDeltaYhandler(e))}>
 
                             <div>
@@ -75,14 +79,16 @@ class Asortiment extends React.Component {
                                 <div className="mt-90">
                                     <nav className="asortiment-list-items">
 
-                                        {this.ifGetItems(this.props.assort.getItems)}
+                                        {/* Выводим по умолчанию категорию walnut (орехи) */}
+                                        {/* { this.ifGetItems(this.props.assort.getItems) } */}
 
                                         <ul>
                                             {
                                                 this.props.assort.getItems.map((item, i) => {
                                                     return (
                                                         <li key={i}>
-                                                            <a href="#!" onClick={() => (this.props.getProdItemsIdHandler(item.title))} className="link mb-20 c-green-b mr-20 fs-24 asortiment-list-items-active">
+                                                            <a href="#!" onClick={() => (this.props.getProdItemsIdHandler(item.title))} 
+                                                            className={ item.active ? 'link mb-20 c-green-b mr-20 fs-24 asortiment-list-items-active' : 'link mb-20 mr-20 fs-24'}>
                                                                 {item.title}
                                                             </a>
                                                         </li>

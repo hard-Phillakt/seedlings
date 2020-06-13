@@ -52,7 +52,8 @@ class Services extends React.Component {
                                                 return (
                                                     <ul key={item.title}>
                                                         <li>
-                                                            <a href="#!" onClick={() => (this.props.onGetServicesProdIdHandler(item.title))} className="link mb-20 c-green-b mr-20 fs-24 asortiment-list-items-active">
+                                                            <a href="#!" onClick={() => (this.props.onGetServicesProdIdHandler(item.title))} 
+                                                            className={ item.active ? 'link mb-20 c-green-b mr-20 fs-24 asortiment-list-items-active' : 'link mb-20 c-green-b mr-20 fs-24' }>
                                                                 {item.title}
                                                             </a>
                                                         </li>

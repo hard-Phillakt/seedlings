@@ -11,36 +11,65 @@ const layers = (state = initState, action) => {
 
             const num = action.param;
 
-            switch (num) {
-                case 100:
+            if(num === 1){
 
-                    if (state.count >= 4) {
-                        return {
-                            ...state,
-                            count: 0
-                        }
-                    }
-
+                if (state.count >= 4) {
                     return {
                         ...state,
-                        count: state.count + 1
+                        count: 0
                     }
+                }
 
+                return {
+                    ...state,
+                    count: state.count + 1
+                }
+            }else {
 
-                case -100:
-
-                    if (state.count <= 0) {
-                        return {
-                            ...state,
-                            count: 4
-                        }
-                    }
-
+                if (state.count <= 0) {
                     return {
                         ...state,
-                        count: state.count - 1
+                        count: 4
                     }
+                }
+
+                return {
+                    ...state,
+                    count: state.count - 1
+                }
             }
+
+
+            // switch (num) {
+            //     case 100:
+
+            //         if (state.count >= 4) {
+            //             return {
+            //                 ...state,
+            //                 count: 0
+            //             }
+            //         }
+
+            //         return {
+            //             ...state,
+            //             count: state.count + 1
+            //         }
+
+
+            //     case -100:
+
+            //         if (state.count <= 0) {
+            //             return {
+            //                 ...state,
+            //                 count: 4
+            //             }
+            //         }
+
+            //         return {
+            //             ...state,
+            //             count: state.count - 1
+            //         }
+            // }
 
 
         case 'TOGGLE_LAYERS':

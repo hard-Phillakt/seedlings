@@ -2,7 +2,7 @@
 const deltaLayer = (param) => {
     return {
         type: "DELTA_Y",
-        param
+        param: Math.sign(param) 
     }
 }
 

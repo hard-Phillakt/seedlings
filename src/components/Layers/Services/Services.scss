@@ -58,6 +58,16 @@ $f-consolas: "consolas";
         font-family: $f-consolas;
         font-size: 20px;
 
+        ul {
+
+            li {
+
+                a {
+                    color: #bdc3c7;
+                }
+            }
+        }
+
         h4 {
             color: #2e4914;
         }
