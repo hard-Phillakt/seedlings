@@ -20,6 +20,10 @@
         border-bottom: 6px solid #2E4914;
         position: relative;
 
+        @media (max-width: 767px) and (min-width: 200px) {
+            height: 300px;
+        }
+
         &::before {
             content: '';
             position: absolute;

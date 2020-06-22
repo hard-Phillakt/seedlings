@@ -7,6 +7,13 @@ import item_1 from './img/slider__item_1.png';
 import item_2 from './img/slider__item_2.png';
 
 
+import slider__item_1 from './min/slider__item_1.jpg'; // Все виды посадочных работ
+import slider__item_2 from './min/slider__item_2.jpg'; // Доставка
+import slider__item_3 from './min/slider__item_3.jpg'; // Консультационные услуги 2
+import slider__item_4 from './min/slider__item_4.jpg'; // Техническое сопровождение
+import slider__item_5 from './min/slider__item_5.jpg'; // Формирование кроны
+
+
 const slider = (props) => {
 
 
@@ -14,41 +21,61 @@ const slider = (props) => {
         <section className="slider" onWheel={(e) => (props.onDeltaYhandler(e))}>
             <div className="swiper-container" data-swiper-parallax="-25%">
                 <div className="swiper-wrapper">
-                    <div className="swiper-slide" style={{ backgroundImage: `url(${item_1})` }}>
+                    <div className="swiper-slide" style={{ backgroundImage: `url(${slider__item_1})` }}>
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">
                                     <h2 data-swiper-parallax="-600" data-swiper-parallax-duration="1000" className="title title__h1 fs-62 c-white">
-                                        Наличие показательных <br />
-                                        интенсивных садов <br />
-                                        грецкого ореха с латера
+                                        Все виды <br /> посадочных работ
                                     </h2>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="swiper-slide" style={{ backgroundImage: `url(${item_2})` }}>
+                    <div className="swiper-slide" style={{ backgroundImage: `url(${slider__item_2})` }}>
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">
                                     <h2 data-swiper-parallax="-600" data-swiper-parallax-duration="1000" className="title title__h1 fs-62 c-white">
-                                        Наличие показательных <br />
-                                        интенсивных садов <br />
-                                        грецкого ореха с латера
+                                        Доставка
                                     </h2>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="swiper-slide" style={{ backgroundImage: `url(${item_1})` }}>
+                    <div className="swiper-slide" style={{ backgroundImage: `url(${slider__item_3})` }}>
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">
                                     <h2 data-swiper-parallax="-600" data-swiper-parallax-duration="1000" className="title title__h1 fs-62 c-white">
-                                        Наличие показательных <br />
-                                        интенсивных садов <br />
-                                        грецкого ореха с латера
+                                        Консультационные  <br /> услуги
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className="swiper-slide" style={{ backgroundImage: `url(${slider__item_4})` }}>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <h2 data-swiper-parallax="-600" data-swiper-parallax-duration="1000" className="title title__h1 fs-62 c-white">
+                                        Техническое  <br /> сопровождение
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className="swiper-slide" style={{ backgroundImage: `url(${slider__item_5})` }}>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <h2 data-swiper-parallax="-600" data-swiper-parallax-duration="1000" className="title title__h1 fs-62 c-white">
+                                        Формирование  <br /> кроны
                                     </h2>
                                 </div>
                             </div>
@@ -65,7 +92,7 @@ const slider = (props) => {
 
 
 const mapStateToProps = (state) => {
-    return {...state}
+    return { ...state }
 }
 
 const mapDispatchToProps = (dispatch) => {

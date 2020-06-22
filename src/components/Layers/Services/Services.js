@@ -27,15 +27,19 @@ class Services extends React.Component {
                             <div>
                                 <div className="row">
                                     <div className="col-lg-6">
-                                        <h3 className="title title__h3 fs-30 c-green-b" onClick={() => (this.props.onGetServicesHandler())}>Услуги</h3>
+                                        <h3 className="title title__h3 fs-30" onClick={() => (this.props.onGetServicesHandler())}>
+                                            <a href="#!" className="c-green-b">Услуги</a>
+                                        </h3>
                                     </div>
                                     <div className="col-lg-6">
-                                        <h3 className="title title__h3 fs-30 c-green-b" onClick={() => (this.props.onGetServicesProdHandler())}>Товары для сада</h3>
+                                        <h3 className="title title__h3 fs-30" onClick={() => (this.props.onGetServicesProdHandler())}>
+                                            <a href="#!" className="c-green-b">Товары для сада</a>
+                                        </h3>
                                     </div>
                                 </div>
 
 
-                                <div className="services__desc mt-90">
+                                <div className="services__desc mt-30">
 
                                     {
 
@@ -52,8 +56,8 @@ class Services extends React.Component {
                                                 return (
                                                     <ul key={item.title}>
                                                         <li>
-                                                            <a href="#!" onClick={() => (this.props.onGetServicesProdIdHandler(item.title))} 
-                                                            className={ item.active ? 'link mb-20 c-green-b mr-20 fs-24 asortiment-list-items-active' : 'link mb-20 c-green-b mr-20 fs-24' }>
+                                                            <a href="#!" onClick={() => (this.props.onGetServicesProdIdHandler(item.title))}
+                                                                className={item.active ? 'link mb-20 c-green-b mr-20 fs-24 asortiment-list-items-active' : 'link mb-20 c-green-b mr-20 fs-24'}>
                                                                 {item.title}
                                                             </a>
                                                         </li>

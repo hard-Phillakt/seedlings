@@ -12,9 +12,19 @@ $f-consolas: 'Consolas';
     top: 0;
     right: 0;
     z-index: 9999;
+
+    @media (max-width: 767px) {
+        display: none;
+    }
     
     &-wrap {
         padding: 14px 0;
+    }
+
+    a {
+        @media (max-width: 991px) {
+            font-size: 12px;
+        }
     }
 
     &-nav {
@@ -67,3 +77,9 @@ $f-consolas: 'Consolas';
     }
 }
 
+.dsp-none_991 {
+
+    @media (max-width: 991px) {
+        display: none;
+    }
+}

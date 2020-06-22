@@ -1,6 +1,11 @@
 $f-consolas: "Consolas";
 
 .button {
+
+    @media (max-width: 767px) {
+        margin: 30px 0;
+    }
+
     &-learn-more {
         display: inline-flex;
         border: 1px solid #f2f5db;

@@ -22,11 +22,11 @@ const menu = (props) => {
                 <div className="container">
                     <div className="row align-items-center">
 
-                        <div className="col-lg-1">
+                        <div className="col-lg-1 col-md-2 col-sm-2 col-xs-2">
                             <a href="/"><img src={logo} alt="logo" /></a>
                         </div>
 
-                        <div className="col-lg-5">
+                        <div className="col-lg-4 col-md-5 col-sm-5 col-xs-5">
                             <nav className="menu-nav">
                                 <ul className="menu-nav__ul fjc-c fai-c">
                                     <li className="menu-nav__ul_li">
@@ -42,7 +42,7 @@ const menu = (props) => {
                             </nav>
                         </div>
 
-                        <div className="col-lg-2">
+                        <div className="col-lg-3 col-md-5 col-sm-5 col-xs-5">
                             <div className="contact-info">
                                 <ul className="contact-info__ul">
                                     <li className="contact-info__ul_li fjc-c mb-10">
@@ -57,7 +57,7 @@ const menu = (props) => {
                             </div>
                         </div>
 
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 dsp-none_991">
                             <div className="button" onClick={() => (props.onViewModalHandler())}>
                                 <span className="button-learn-more" >
                                 {/* pt-10 pb-10 pr-10 pl-10 */}
