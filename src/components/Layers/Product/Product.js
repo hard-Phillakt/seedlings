@@ -39,7 +39,7 @@ class Product extends React.Component {
                                                     return (
                                                         <li key={i}>
                                                             <a href="#!" onClick={() => (this.props.getProdSelectIdHandler(item.title))} 
-                                                            className={ item.active ? 'link mb-20 c-green-b mr-20 fs-24 asortiment-list-items-active' : 'link mb-20 c-green-b mr-20 fs-24' }>
+                                                            className={ item.active ? 'link mb-20 mr-20 fs-24 asortiment-list-items-active' : 'link mb-20 mr-20 fs-24' }>
                                                                 {item.title}
                                                             </a>
                                                         </li>

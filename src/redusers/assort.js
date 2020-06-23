@@ -29,10 +29,10 @@ import applePear_6 from '../components/Layers/Asortiment/Apple-Pear/min/apple-pe
 // Малина,Ежевика
 // import raspberryBlackberry from '../components/Layers/Asortiment/Raspberry-Blackberry/img/raspberry-blackberry__item_1.png';
 import raspberryBlackberry_1 from '../components/Layers/Asortiment/Raspberry-Blackberry/min/raspberry-blackberry__item_1.png'; // Ежевика Блек Меджик
-import raspberryBlackberry_2 from '../components/Layers/Asortiment/Raspberry-Blackberry/min/raspberry-blackberry__item_1.png'; // Ежевика Честер Торнлесс
-import raspberryBlackberry_3 from '../components/Layers/Asortiment/Raspberry-Blackberry/min/raspberry-blackberry__item_1.png'; // Малина Геракл ремонтантная
-import raspberryBlackberry_4 from '../components/Layers/Asortiment/Raspberry-Blackberry/min/raspberry-blackberry__item_1.png'; // Малина Гигант Московский
-import raspberryBlackberry_5 from '../components/Layers/Asortiment/Raspberry-Blackberry/min/raspberry-blackberry__item_1.png'; // Малина Полесье ремонтантная
+import raspberryBlackberry_2 from '../components/Layers/Asortiment/Raspberry-Blackberry/min/raspberry-blackberry__item_2.png'; // Ежевика Честер Торнлесс
+import raspberryBlackberry_3 from '../components/Layers/Asortiment/Raspberry-Blackberry/min/raspberry-blackberry__item_3.png'; // Малина Геракл ремонтантная
+import raspberryBlackberry_4 from '../components/Layers/Asortiment/Raspberry-Blackberry/min/raspberry-blackberry__item_4.png'; // Малина Гигант Московский
+import raspberryBlackberry_5 from '../components/Layers/Asortiment/Raspberry-Blackberry/min/raspberry-blackberry__item_5.png'; // Малина Полесье ремонтантная
 
 
 
@@ -49,22 +49,24 @@ import product__item_5 from '../components/Layers/Product/min/product__item_5.pn
 
 
 const initState = {
-    menu: [{
-        title: "Грецкий орех",
-        type: "walnut"
-    },
-    {
-        title: "Фундук",
-        type: "hazelnut"
-    },
-    {
-        title: "Яблони/Груши",
-        type: "apple-pear"
-    },
-    {
-        title: "Малина/Ежевика",
-        type: "raspberry-blackberry"
-    }],
+    menu: [
+        {
+            title: "Грецкий орех",
+            active: true,
+            type: "walnut"
+        },
+        {
+            title: "Фундук",
+            type: "hazelnut"
+        },
+        {
+            title: "Яблони/Груши",
+            type: "apple-pear"
+        },
+        {
+            title: "Малина/Ежевика",
+            type: "raspberry-blackberry"
+        }],
     items: [
         //  Грецкий орех ################################################
         {
@@ -328,6 +330,23 @@ const initState = {
 const assort = (state = initState, action) => {
 
     switch (action.type) {
+
+        case 'SET_MARK':
+        
+            state.menu.map((item, i) => {
+
+                item.active = false;
+
+                if (action.param === i) {
+                    item.active = true;
+                }
+            });
+
+            return {
+                ...state,
+                state
+            }
+
         case 'GET_PROD_ITEM':
 
             //  Очищаем item от active class

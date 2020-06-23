@@ -1,6 +1,16 @@
 
 //  Услуги
-import servicesOne from '../components/Layers/Services/services_one/img/services_one.png'; // Краска для деревьев садовая «GOLDBASTIK BT 10»
+// import servicesOne from '../components/Layers/Services/services_one/img/services_one.png';
+import servicesOne_1 from '../components/Layers/Services/services_one/min/services_one_1.jpg'; // Все виды посадочных работ
+import servicesOne_2 from '../components/Layers/Services/services_one/min/services_one_2.jpg'; // Доставка
+import servicesOne_3 from '../components/Layers/Services/services_one/min/services_one_3.jpg'; // Консультационные услуги 2
+import servicesOne_4 from '../components/Layers/Services/services_one/min/services_one_4.jpg'; // Техническое сопровождение
+import servicesOne_5 from '../components/Layers/Services/services_one/min/services_one_5.jpg'; // Формирование кроны
+
+
+
+
+
 
 
 //  Товары для сада
@@ -28,53 +38,96 @@ const initToggleBlocks = {
     viewServices: [
         {
             title: 'Услуги',
-            img: `${servicesOne}`,
-            text: `
-            <h4>Доставка саженцев грецкого ореха в любой регион РФ, страны Ближнего и Дальнего зарубежья</h4>
-            <p>
-                Все виды посадочных работ
-            </p>
-            <p>
-                Техническое сопровождение на всех этапах закладки и выращивания садовых культур собственной сельхоз техникой
-            </p>
-            Консультационные услуги:
-            <ul>
-                <li>- Выбор посадочного материала</li>
-                <li>- Разработка карт по внесению подкормки</li>
-                <li>- Борьба с вредителями</li>
-            </ul>
-            <p>
-                Обрезка сада (формирование кроны)
-            </p>
-            `
+            img: `${servicesOne_1}`,
+            servicesItems: [
+                {
+                    title: `
+                    Доставка саженцев грецкого ореха в любой регион РФ, страны Ближнего и Дальнего зарубежья
+                    `,
+                    img: `${servicesOne_1}`,
+                    active: true,
+                },
+                {
+                    title: `
+                    Все виды посадочных работ
+                    `,
+                    img: `${servicesOne_2}`,
+                },
+                {
+                    title: `
+                    Техническое сопровождение на всех этапах закладки и выращивания садовых культур собственной сельхоз техникой
+                    `,
+                    img: `${servicesOne_3}`,
+                },
+                {
+                    title: `
+                    Консультационные услуги:
+                    <ul>
+                        <li>- Выбор посадочного материала</li>
+                        <li>- Разработка карт по внесению подкормки</li>
+                        <li>- Борьба с вредителями</li>
+                    </ul>
+                    `,
+                    img: `${servicesOne_4}`,
+                },
+                {
+                    title: `
+                    Обрезка сада (формирование кроны)
+                    `,
+                    img: `${servicesOne_5}`,
+                },
+            ]
         }
     ],
     servicesPage: [
         {
             title: 'Услуги',
-            img: `${servicesOne}`,
-            text: `
-            <h4>Доставка саженцев грецкого ореха в любой регион РФ, страны Ближнего и Дальнего зарубежья</h4>
-            <p>
-                Все виды посадочных работ
-            </p>
-            <p>
-                Техническое сопровождение на всех этапах закладки и выращивания садовых культур собственной сельхоз техникой
-            </p>
-            Консультационные услуги:
-            <ul>
-                <li>- Выбор посадочного материала</li>
-                <li>- Разработка карт по внесению подкормки</li>
-                <li>- Борьба с вредителями</li>
-            </ul>
-            <p>
-                Обрезка сада (формирование кроны)
-            </p>
-            `
+            img: `${servicesOne_1}`,
+            servicesItems: [
+                {
+                    title: `
+                    Доставка саженцев грецкого ореха в любой регион РФ, страны Ближнего и Дальнего зарубежья
+                    `,
+                    img: `${servicesOne_1}`,
+                    active: true,
+                },
+                {
+                    title: `
+                    Все виды посадочных работ
+                    `,
+                    img: `${servicesOne_2}`,
+                },
+                {
+                    title: `
+                    Техническое сопровождение на всех этапах закладки и выращивания садовых культур собственной сельхоз техникой
+                    `,
+                    img: `${servicesOne_3}`,
+                },
+                {
+                    title: `
+                    Консультационные услуги:
+                    <ul>
+                        <li>- Выбор посадочного материала</li>
+                        <li>- Разработка карт по внесению подкормки</li>
+                        <li>- Борьба с вредителями</li>
+                    </ul>
+                    `,
+                    img: `${servicesOne_4}`,
+                },
+                {
+                    title: `
+                    Обрезка сада (формирование кроны)
+                    `,
+                    img: `${servicesOne_5}`,
+                },
+            ]
         }
     ],
+    // Выбранная услуга
+    servicesItemId: {},
     // Выбранный товар
     servicesProductsId: {},
+    
 
     // Массив товаров
     servicesProducts: [
@@ -294,6 +347,28 @@ const initToggleBlocks = {
 const services = (state = initToggleBlocks, action) => {
 
     switch (action.type) {
+
+
+        case 'GET_SERVICES_ITEM' :
+
+            let servItem = {};
+
+            console.log('GET_SERVICES_ITEM: ', action.param);
+            
+            state.servicesPage[0].servicesItems.map((item, i) => {
+
+                if(i === action.param){
+                    servItem = item;
+                }
+
+            });
+
+            return {
+                ...state,
+                servicesItemId: servItem
+            }
+
+
         case 'GET_SERVICES':
 
             return {

@@ -18,30 +18,30 @@ class Asortiment extends React.Component {
     }
 
     //  Выводим по умолчанию категорию walnut
-    ifGetItems(param) {
+    // ifGetItems(param) {
 
-        if (!param.length) {
+    //     if (!param.length) {
 
-            this.props.getProdItemsHandler('walnut');
+    //         this.props.getProdItemsHandler('walnut');
 
-        } else {
+    //     } else {
 
-            this.props.assort.getItems.map((item, i) => {
-                return (
-                    <li key={i}>
-                        <a href="#!" onClick={() => (this.props.getProdItemsIdHandler(item.title))} className={ item.active ? 'link mb-20 c-green-b mr-20 fs-24 asortiment-list-items-active' : 'link mb-20 mr-20 fs-24'}>
-                            {item.title}
-                        </a>
-                    </li>
-                )
-            })
-        }
+    //         this.props.assort.getItems.map((item, i) => {
+    //             return (
+    //                 <li key={i}>
+    //                     <a href="#!" onClick={() => (this.props.getProdItemsIdHandler(item.title))} className={ item.active ? 'link mb-20 c-green-b mr-20 fs-24 asortiment-list-items-active' : 'link mb-20 mr-20 fs-24'}>
+    //                         {item.title}
+    //                     </a>
+    //                 </li>
+    //             )
+    //         })
+    //     }
 
-    }
+    // }
 
     render() {
 
-        console.log(this.props.assort.getItems);
+        // console.log(this.props.assort.getItems);
         
 
         return (
@@ -50,6 +50,7 @@ class Asortiment extends React.Component {
                     <div className="row">
 
                         <div className="col-lg-6 flex-stretching" onWheel={(e) => (this.props.onDeltaYhandler(e))}>
+                        {/* <div className="col-lg-6 flex-stretching" > */}
 
                             <div>
                                 <h3 className="title title__h3 fs-30 c-green-b">Ассортимент. Саженцы</h3>
@@ -65,7 +66,17 @@ class Asortiment extends React.Component {
                                             this.menu.map((item, i) => {
                                                 return (
                                                     <li key={i}>
-                                                        <a href="#!" className="link mr-20 c-gray-b fs-18" onClick={() => (this.props.getProdItemsHandler(item.type))}>
+                                                        <a href="#!" 
+                                                        className={ item.active ? 'link mr-20 c-gray-b fs-18 asortiment-menu-active' : 'link mr-20 c-gray-b fs-18'} 
+                                                        onClick={() => {
+
+                                                            // console.log(i)
+
+                                                            this.props.setMarkItemMenuHandler(i)
+
+                                                            this.props.getProdItemsHandler(item.type)
+
+                                                        }}>
                                                             {item.title}
                                                         </a>
                                                     </li>
@@ -144,6 +155,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         getProdItemsIdHandler: (param) => {
             dispatch(getProdItemId(param));
+        },
+        setMarkItemMenuHandler: (param) => {
+            dispatch({type: 'SET_MARK', param});
         },
     }
 }

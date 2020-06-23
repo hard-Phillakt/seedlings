@@ -39,7 +39,7 @@ class Services extends React.Component {
                                 </div>
 
 
-                                <div className="services__desc mt-30">
+                                <div className={this.props.services.view === 'SERVICES' ? 'services__desc mt-90' : 'services__desc mt-90' }>
 
                                     {
 
@@ -47,9 +47,26 @@ class Services extends React.Component {
 
                                             if (this.props.services.view === 'SERVICES') {
 
-                                                return (
-                                                    <div key={item.title} dangerouslySetInnerHTML={{ __html: item.text }}></div>
-                                                )
+                                                return(
+                                                        <ul key={item.title}>
+                                                            {
+                                                                item.servicesItems.map((item, i ) => {
+                                                                    {/* console.log(item.title); */}
+
+                                                                    return (
+                                                                        <li key={item.title} >
+                                                                            <a 
+                                                                            className="fs-24"
+                                                                            href="#!" 
+                                                                            dangerouslySetInnerHTML={{ __html:  item.title }}
+                                                                            onClick={() => (this.props.onGetServicesItemHandler(i))}
+                                                                            ></a>
+                                                                        </li>
+                                                                    )
+                                                                })
+                                                            }
+                                                        </ul>
+                                                    )
 
                                             } else {
 
@@ -57,7 +74,7 @@ class Services extends React.Component {
                                                     <ul key={item.title}>
                                                         <li>
                                                             <a href="#!" onClick={() => (this.props.onGetServicesProdIdHandler(item.title))}
-                                                                className={item.active ? 'link mb-20 c-green-b mr-20 fs-24 asortiment-list-items-active' : 'link mb-20 c-green-b mr-20 fs-24'}>
+                                                                className={item.active ? 'link mr-20 fs-24 asortiment-list-items-active' : 'link mr-20 fs-24'}>
                                                                 {item.title}
                                                             </a>
                                                         </li>
@@ -133,6 +150,12 @@ const mapDispatchToProps = (dispatch) => {
         },
         onGetServicesProdIdHandler: (param) => {
             dispatch(getServicesProdId(param))
+        },
+        onGetServicesItemHandler: (param) => {
+
+            // console.log(param);
+            
+            dispatch({type: 'GET_SERVICES_ITEM', param})
         }
     }
 }

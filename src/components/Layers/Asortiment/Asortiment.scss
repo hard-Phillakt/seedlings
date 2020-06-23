@@ -63,14 +63,21 @@ $f-consolas: "consolas";
 
     &-list-items {
         font-family: $f-consolas;
+
         &-active {
             color: #2e4914 !important;
         }
+
         ul {
             li {
-                .link {
+                a {
                     display: inline-block;
                     color: #bdc3c7;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        color: #2e4914;
+                    }
                 }
             }
         }
@@ -119,4 +126,30 @@ $f-consolas: "consolas";
             }
         }
     }
+}
+
+.asortiment-menu {
+    a {
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: #2e4914 !important;
+        }
+    }
+}
+
+.asortiment-menu-active {
+    display: inline-flex;
+    position: relative;
+    color: #2e4914 !important;
+    transition: all 0.3s ease-in-out;
+
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 25px;
+    //     left: 0;
+    //     width: 70%;
+    //     height: 3px;
+    //     background: #2e4914;
+    // }
 }

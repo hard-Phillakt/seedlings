@@ -62,21 +62,21 @@ $f-consolas: "consolas";
         font-family: $f-consolas;
         font-size: 20px;
 
-        ul {
+        a {
+            display: inline-block;
+            color: #bdc3c7;
+            transition: all 0.3s ease-in-out;
 
-            li {
-
-                a {
-                    color: #bdc3c7;
-                }
+            &:hover {
+                color: #2e4914;
             }
         }
 
-        h4 {
-            color: #2e4914;
+        li {
+            margin-bottom: 20px;
         }
 
-        h4, p, li {
+        p {
             margin-bottom: 20px;
         }
     }

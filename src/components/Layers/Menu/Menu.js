@@ -13,7 +13,7 @@ import viewModal from '../../../actions/viewModal';
 
 const menu = (props) => {
 
-    console.log(props);
+    // console.log(props);
     
 
     return (
