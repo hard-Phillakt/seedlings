@@ -8,9 +8,13 @@
     right: 0;
     z-index: 6;
     // z-index: 2;
-    background: #fff;
-    //  padding-top: 90px; 
+    // background: #fff;
     padding-top: 100px;
+    background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%);
+
+    @media (max-width: 767px) {
+        padding-top: 0;
+    }
 
     &-bg {
         display: flex;

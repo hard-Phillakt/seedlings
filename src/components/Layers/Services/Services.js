@@ -17,6 +17,10 @@ class Services extends React.Component {
 
     render() {
 
+        // console.log(this.props.services.servicesItemId);
+        // console.log(this.props.services.servicesProductsId);
+
+
         return (
             <section className="services">
                 <div className="container">
@@ -26,62 +30,36 @@ class Services extends React.Component {
 
                             <div>
                                 <div className="row">
-                                    <div className="col-lg-6">
+                                    {/* <div className="col-lg-6">
                                         <h3 className="title title__h3 fs-30" onClick={() => (this.props.onGetServicesHandler())}>
                                             <a href="#!" className="c-green-b">Услуги</a>
                                         </h3>
-                                    </div>
+                                    </div> */}
                                     <div className="col-lg-6">
-                                        <h3 className="title title__h3 fs-30" onClick={() => (this.props.onGetServicesProdHandler())}>
+                                        {/* <h3 className="title title__h3 fs-30" onClick={() => (this.props.onGetServicesProdHandler())}> */}
+                                        <h3 className="title title__h3 fs-30">
                                             <a href="#!" className="c-green-b">Товары для сада</a>
                                         </h3>
                                     </div>
                                 </div>
 
 
-                                <div className={this.props.services.view === 'SERVICES' ? 'services__desc mt-90' : 'services__desc mt-90' }>
+                                <div className="services__desc mt-30">
 
                                     {
 
-                                        this.props.services.viewServices.map((item, i) => {
+                                        this.props.services.servicesProducts.map((item, i) => {
 
-                                            if (this.props.services.view === 'SERVICES') {
-
-                                                return(
-                                                        <ul key={item.title}>
-                                                            {
-                                                                item.servicesItems.map((item, i ) => {
-                                                                    {/* console.log(item.title); */}
-
-                                                                    return (
-                                                                        <li key={item.title} >
-                                                                            <a 
-                                                                            className="fs-24"
-                                                                            href="#!" 
-                                                                            dangerouslySetInnerHTML={{ __html:  item.title }}
-                                                                            onClick={() => (this.props.onGetServicesItemHandler(i))}
-                                                                            ></a>
-                                                                        </li>
-                                                                    )
-                                                                })
-                                                            }
-                                                        </ul>
-                                                    )
-
-                                            } else {
-
-                                                return (
-                                                    <ul key={item.title}>
-                                                        <li>
-                                                            <a href="#!" onClick={() => (this.props.onGetServicesProdIdHandler(item.title))}
-                                                                className={item.active ? 'link mr-20 fs-24 asortiment-list-items-active' : 'link mr-20 fs-24'}>
-                                                                {item.title}
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                )
-
-                                            }
+                                            return (
+                                                <ul key={item.title}>
+                                                    <li>
+                                                        <a href="#!" onClick={() => (this.props.onGetServicesProdIdHandler(item.title))}
+                                                            className={item.active ? 'link mr-20 fs-24 asortiment-list-items-active' : 'link mr-20 fs-24'}>
+                                                            {item.title}
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            )
 
                                         })
 
@@ -103,22 +81,17 @@ class Services extends React.Component {
                             <div className="services-box">
                                 {/* Выводим картинку */}
 
-                                {
-                                    this.props.services.servicesProductsId.title ?
-                                        <div>
-                                            <div className="services-box__img img-res" style={{ height: 400, backgroundImage: `url(${this.props.services.servicesProductsId.img})` }}>
+                                <div>
+                                    <div className="services-box__img img-res" style={{ height: 400, backgroundImage: `url(${this.props.services.servicesProductsId.img})` }}>
 
-                                            </div>
-                                            <div className="asortiment-box__desc">
-                                                <div className="asortiment-box__desc_scroll mt-30">
-                                                    {/* Выводим текст */}
-                                                    {this.props.services.servicesProductsId.text}
-                                                </div>
-                                            </div>
+                                    </div>
+                                    <div className="asortiment-box__desc">
+                                        <div className="asortiment-box__desc_scroll mt-30">
+                                            {/* Выводим текст */}
+                                            {this.props.services.servicesProductsId.text}
                                         </div>
-                                        :
-                                        <div className="services-box__img img-res" style={{ backgroundImage: `url(${this.props.services.viewServices[0].img})` }}></div>
-                                }
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
@@ -152,10 +125,7 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(getServicesProdId(param))
         },
         onGetServicesItemHandler: (param) => {
-
-            // console.log(param);
-            
-            dispatch({type: 'GET_SERVICES_ITEM', param})
+            dispatch({ type: 'GET_SERVICES_ITEM', param })
         }
     }
 }

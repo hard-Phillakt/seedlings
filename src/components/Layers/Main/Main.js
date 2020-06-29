@@ -13,6 +13,7 @@ class Main extends React.Component {
 
         return (
             <section className="main" onWheel={(e) => (this.props.onDeltaYhandler(e))}>
+            {/* <section className="main" > */}
                 <div className="main-bg">
                     <div className="container">
                         <div className="row">
@@ -25,10 +26,13 @@ class Main extends React.Component {
 
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-11 offset-lg-1">
-                            <div className="description-border-l mt-70 pl-30 pt-10 pb-10">
+                        <div className="col-lg-12 tac">
+                            <div className="mt-70 pl-30 pt-10 pb-10">
                                 <div className="description description__md fs-26 c-black-light mb-20">
-                                    Поставка саженцев грецкого ореха из специализированного орехового питомника более чем с 20-ти летним опытом селекционной работы
+                                    Поставка саженцев грецкого ореха из специализированного 
+                                </div>
+                                <div className="description description__md fs-26 c-black-light mb-20">
+                                    орехового питомника более чем с 20-ти летним опытом селекционной работы
                                 </div>
                                 <div className="description description__md fs-26 c-black-light mb-20">
                                     Гарантия приживаемости и соответствия сорта

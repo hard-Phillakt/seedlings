@@ -11,11 +11,13 @@ import phone from './icons/phone.svg';
 import toggleLayers from '../../../actions/toggleLayers';
 import viewModal from '../../../actions/viewModal';
 
+import getServicesProd from '../../../actions/getServicesProd';
+import getServices from '../../../actions/getServices';
+
 const menu = (props) => {
 
     // console.log(props);
     
-
     return (
         <section className="menu">
             <div className="menu-wrap">
@@ -23,10 +25,10 @@ const menu = (props) => {
                     <div className="row align-items-center">
 
                         <div className="col-lg-1 col-md-2 col-sm-2 col-xs-2">
-                            <a href="/"><img src={logo} alt="logo" /></a>
+                            <a href="./"><img src={logo} alt="logo" /></a>
                         </div>
 
-                        <div className="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                        <div className="col-lg-5 col-md-5 col-sm-5 col-xs-5">
                             <nav className="menu-nav">
                                 <ul className="menu-nav__ul fjc-c fai-c">
                                     <li className="menu-nav__ul_li">
@@ -36,18 +38,27 @@ const menu = (props) => {
                                         <a className={ props.layers.count === 3 ? 'link c-green fs-14 menu-active' : 'link c-green fs-14' } href="#!" onClick={() => (props.onToggleLayersHandler(3))}>Продукция</a>
                                     </li>
                                     <li className="menu-nav__ul_li">
-                                        <a className={ props.layers.count === 4 ? 'link c-green fs-14 menu-active' : 'link c-green fs-14' } href="#!" onClick={() => (props.onToggleLayersHandler(4))}>Услуги</a>
+                                        <a className={ props.layers.count === 4 ? 'link c-green fs-14 menu-active' : 'link c-green fs-14' } href="#!"  onClick={() => {  
+                                        props.onToggleLayersHandler(4)
+                                        // props.onGetServicesProdHandler()
+                                        }}>Товары для сада</a>
+                                    </li>
+                                    <li className="menu-nav__ul_li">
+                                        <a className={ props.layers.count === 5 ? 'link c-green fs-14 menu-active' : 'link c-green fs-14' } href="#!" onClick={() => { 
+                                            props.onToggleLayersHandler(5)
+                                            // props.onGetServicesHandler()
+                                        }}>Услуги</a>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
 
-                        <div className="col-lg-3 col-md-5 col-sm-5 col-xs-5">
+                        <div className="col-lg-2 col-md-5 col-sm-5 col-xs-5">
                             <div className="contact-info">
                                 <ul className="contact-info__ul">
                                     <li className="contact-info__ul_li fjc-c mb-10">
                                         <img className="pr-10" src={phone} alt="phone" />
-                                        <a className="link c-green fs-14" href="tel:+7 000 000 00 00" >+7 000 000 00 00</a>
+                                        <a className="link c-green fs-14" href="tel:+79803895908" >+7 980 389 59 08</a>
                                     </li>
                                     <li className="contact-info__ul_li fjc-c">
                                         <img className="pr-10" src={email} alt="email" />
@@ -88,6 +99,12 @@ const mapDispatchToProps = (dispatch) => {
         },
         onViewModalHandler: (param) => {
             dispatch(viewModal(param));
+        },
+        onGetServicesProdHandler: (param) => {
+            dispatch(getServicesProd(param))
+        },
+        onGetServicesHandler: (param) => {
+            dispatch(getServices(param))
         },
     }
 }

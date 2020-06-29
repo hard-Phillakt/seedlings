@@ -1,0 +1,83 @@
+$f-consolas: "consolas";
+
+.services {
+    height: 100vh;
+    padding-top: 150px;
+
+    @media (max-width: 767px) {
+        padding-top: 60px;
+    }
+
+    &-menu {
+        font-family: $f-consolas;
+        font-weight: 100;
+
+        &-active {
+            color: #000;
+        }
+
+        ul {
+            li {
+                a {
+                }
+            }
+        }
+    }
+
+    &-list-items {
+        font-family: $f-consolas;
+        &-active {
+            color: #2e4914 !important;
+        }
+        ul {
+            li {
+                .link {
+                    display: inline-block;
+                    color: #333333;
+                }
+
+                a {
+                }
+            }
+        }
+    }
+
+    &-box {
+        padding: 30px;
+        border: 1px solid #2e4914;
+        border-radius: 1em;
+
+        &__img {
+            background-repeat: no-repeat !important;
+            background-size: cover;
+            background-position: center;
+            border-radius: 1em;
+            height: 700px;
+            width: 100%;
+        }
+
+    }
+
+    &__desc {
+        font-family: $f-consolas;
+        font-size: 20px;
+
+        a {
+            display: inline-block;
+            color: #bdc3c7;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: #2e4914;
+            }
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+    }
+}

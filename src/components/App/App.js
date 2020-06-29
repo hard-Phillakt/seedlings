@@ -32,6 +32,7 @@ import Main from '../Layers/Main/Main';
 import Slider from '../Layers/Slider/Slider';
 import Asortiment from '../Layers/Asortiment/Asortiment';
 import Services from '../Layers/Services/Services';
+import ServicesDesc from '../Layers/ServicesDesc/ServicesDesc';
 import Product from '../Layers/Product/Product';
 import Modal from '../../components/Modal/Modal';
 import Dots from '../../components/Dots/Dots';
@@ -41,7 +42,6 @@ class App extends React.Component {
 
     constructor(props){
         super(props);
-
         this.refLayers = React.createRef(); 
     }
 
@@ -62,24 +62,28 @@ class App extends React.Component {
                 }
 
             }
+
         }
 
     }
 
     render() {
 
-        this.onScrollhandler(this.refLayers.current)
+        //  Ждем пока DOM отрендерится (костыль)
+        setTimeout(() => {
+            this.onScrollhandler(this.refLayers.current)
+        }, 100)
 
         return (
             <section className="App">
                 <Menu />
-                {/* <section className="all-layers" ref={this.refLayers} onScroll={(e) => (this.props.onDeltaYhandler(e))}> */}
                 <section className="all-layers" ref={this.refLayers} >
                     <Main />
                     <Slider />
                     <Asortiment />
                     <Product />
                     <Services />
+                    <ServicesDesc />
                 </section>
                 <Modal />
                 <Dots />

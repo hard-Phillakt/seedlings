@@ -17,32 +17,7 @@ class Asortiment extends React.Component {
         this.menu = this.props.assort.menu;
     }
 
-    //  Выводим по умолчанию категорию walnut
-    // ifGetItems(param) {
-
-    //     if (!param.length) {
-
-    //         this.props.getProdItemsHandler('walnut');
-
-    //     } else {
-
-    //         this.props.assort.getItems.map((item, i) => {
-    //             return (
-    //                 <li key={i}>
-    //                     <a href="#!" onClick={() => (this.props.getProdItemsIdHandler(item.title))} className={ item.active ? 'link mb-20 c-green-b mr-20 fs-24 asortiment-list-items-active' : 'link mb-20 mr-20 fs-24'}>
-    //                         {item.title}
-    //                     </a>
-    //                 </li>
-    //             )
-    //         })
-    //     }
-
-    // }
-
     render() {
-
-        // console.log(this.props.assort.getItems);
-        
 
         return (
             <section className="asortiment">

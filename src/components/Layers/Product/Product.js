@@ -31,7 +31,8 @@ class Product extends React.Component {
                                 </div>
 
                                 <div className="mt-90">
-                                    <div className="asortiment-box__desc_scroll asortiment-list-items">
+                                {/* asortiment-box__desc_scroll класс для скрола когда много продуктов */}
+                                    <div className="asortiment-list-items">
 
                                         <ul>
                                             {

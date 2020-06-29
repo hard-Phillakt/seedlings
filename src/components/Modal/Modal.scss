@@ -10,6 +10,22 @@
     right: 0;
     z-index: 10000;
     transition: all .3s ease-in-out;
+
+
+    @media (max-width: 767px) {
+
+        .modal-img__form, .modal-img__phone {
+            display: none;
+        }
+
+        .mb-40, .mt-40 {
+            margin: 5px 0;
+        }
+
+        .mb-30, .mt-30 {
+            margin: 5px 0;
+        }
+    }
 }
 
 .modal-hidden {
@@ -18,6 +34,7 @@
 }
 
 .modal-visible {
+    overflow-y: scroll;
     visibility: visible;
     opacity: 1;
 }
@@ -29,6 +46,10 @@
     padding: 10px;
     background: #F2F5DB;
     border-radius: 26px;
+
+    @media (max-width: 767px) {
+        width: 90%;
+    }
 }
 
 .modal {

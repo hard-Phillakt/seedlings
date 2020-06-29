@@ -1,7 +1,7 @@
 
 const initState = {
     count: 0,
-    layers: [0, 1, 2, 3, 4]
+    layers: [0, 1, 2, 3, 4, 5]
 }
 
 const layers = (state = initState, action) => {
@@ -13,7 +13,7 @@ const layers = (state = initState, action) => {
 
             if(num === 1){
 
-                if (state.count >= 4) {
+                if (state.count >= 5) {
                     return {
                         ...state,
                         count: 0
@@ -29,7 +29,7 @@ const layers = (state = initState, action) => {
                 if (state.count <= 0) {
                     return {
                         ...state,
-                        count: 4
+                        count: 5
                     }
                 }
 
@@ -38,39 +38,6 @@ const layers = (state = initState, action) => {
                     count: state.count - 1
                 }
             }
-
-
-            // switch (num) {
-            //     case 100:
-
-            //         if (state.count >= 4) {
-            //             return {
-            //                 ...state,
-            //                 count: 0
-            //             }
-            //         }
-
-            //         return {
-            //             ...state,
-            //             count: state.count + 1
-            //         }
-
-
-            //     case -100:
-
-            //         if (state.count <= 0) {
-            //             return {
-            //                 ...state,
-            //                 count: 4
-            //             }
-            //         }
-
-            //         return {
-            //             ...state,
-            //             count: state.count - 1
-            //         }
-            // }
-
 
         case 'TOGGLE_LAYERS':
 

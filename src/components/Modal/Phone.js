@@ -13,11 +13,11 @@ const phone = (props) => {
             <div className="row">
                 <div className="col-lg-4 offset-lg-2">
 
-                    <div className="tac">
+                    <div className="modal-img__phone tac">
                         <img src={phoneImg} alt="phone" />
                     </div>
 
-                    <div className="description description__md fs-14 c-black-light mt-20 tac">
+                    <div className="description description__md fs-14 c-black-light mt-20 mb-20 tac">
                         Чтобы узнать стоимость <br />
                         интересующих вас товаров/услуг <br />
                         закажите обратный звонок

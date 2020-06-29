@@ -64,7 +64,7 @@ class Modal extends React.Component {
 
                                         <div className="col-lg-6">
                                             <div className="mb-40 mt-40">
-                                                <h3 className="title title__h3 fs-30">
+                                                <h3 className="title title__h3 fs-30 tac">
                                                     <a href="#!" className="c-green-b" onClick={() => (this.props.onToggleComponentsModal('phone'))} >Обратный звонок</a>
                                                 </h3>
                                             </div>
