@@ -69,11 +69,20 @@ $f-consolas: "consolas";
         }
 
         ul {
+
+            @media (max-width: 767px) {
+                columns: 2;
+            }
+
             li {
                 a {
                     display: inline-block;
                     color: #bdc3c7;
                     transition: all 0.3s ease-in-out;
+
+                    @media (max-width: 767px) {
+                        font-size: 20px;
+                    }
 
                     &:hover {
                         color: #2e4914;
@@ -88,6 +97,11 @@ $f-consolas: "consolas";
         border: 1px solid #2e4914;
         border-radius: 1em;
 
+        @media (max-width: 767px) {
+            transform: translateY(-65px);
+        }
+        
+
         &__img {
             background-repeat: no-repeat !important;
             background-size: cover;
@@ -95,6 +109,11 @@ $f-consolas: "consolas";
             border-radius: 1em;
             height: 400px;
             width: 100%;
+
+            @media (max-width: 767px) {
+                height: 200px;
+            }
+            
         }
 
         &__desc {
@@ -118,6 +137,11 @@ $f-consolas: "consolas";
                 overflow-y: scroll;
                 font-size: 18px;
                 line-height: 1.5;
+
+                @media (max-width: 767px) {
+                    height: 170px;
+                    font-size: 14px;
+                }
 
                 p {
                     font-size: 20px;

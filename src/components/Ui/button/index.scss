@@ -26,6 +26,14 @@ $f-consolas: "Consolas";
         border: 1px solid #2e4914;
         padding: 3px 0px;
 
+        @media (max-width: 767px) {
+            transform: translateY(495px);
+            position: relative;
+            z-index: 99;
+        }
+    
+
+
         span {
             display: inline-flex;
             color: #f2f5db;

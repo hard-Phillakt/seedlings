@@ -1,11 +1,16 @@
 $f-consolas: "consolas";
 
-.services {
+.services-desc  {
     height: 100vh;
     padding-top: 150px;
 
     @media (max-width: 767px) {
         padding-top: 60px;
+
+
+        .button-rub {
+            transform: translateY(280px);
+        }
     }
 
     &-menu {
@@ -47,6 +52,11 @@ $f-consolas: "consolas";
         border: 1px solid #2e4914;
         border-radius: 1em;
 
+        @media (max-width: 767px) {
+            transform: translateY(-75px);
+        }
+        
+
         &__img {
             background-repeat: no-repeat !important;
             background-size: cover;
@@ -54,6 +64,11 @@ $f-consolas: "consolas";
             border-radius: 1em;
             height: 700px;
             width: 100%;
+
+            @media (max-width: 767px) {
+                height: 200px;
+                background-position: center;
+            }
         }
 
     }
@@ -62,15 +77,26 @@ $f-consolas: "consolas";
         font-family: $f-consolas;
         font-size: 20px;
 
-        a {
-            display: inline-block;
-            color: #bdc3c7;
-            transition: all 0.3s ease-in-out;
+        ul {
 
-            &:hover {
-                color: #2e4914;
+            a {
+                display: inline-block;
+                color: #bdc3c7;
+                transition: all 0.3s ease-in-out;
+    
+                @media (max-width: 767px) {
+                    font-size: 18px;
+                }
+
+
+                &:hover {
+                    color: #2e4914;
+                }
             }
+
         }
+
+
 
         li {
             margin-bottom: 20px;

@@ -50,7 +50,7 @@ class Services extends React.Component {
 
                                         this.props.services.servicesProducts.map((item, i) => {
 
-                                            return (
+                                            return (    
                                                 <ul key={item.title}>
                                                     <li>
                                                         <a href="#!" onClick={() => (this.props.onGetServicesProdIdHandler(item.title))}

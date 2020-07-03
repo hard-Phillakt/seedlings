@@ -13,6 +13,17 @@ import item_2 from './img/slider__item_2.png';
 // import slider__item_4 from './min/slider__item_4.jpg'; // Техническое сопровождение
 // import slider__item_5 from './min/slider__item_5.jpg'; // Формирование кроны
 
+import slider__item_1 from './min/webp/slider-1.webp';
+import slider__item_2 from './min/webp/slider-2.webp';
+import slider__item_3 from './min/webp/slider-3.webp';
+import slider__item_4 from './min/webp/slider-4.webp';
+import slider__item_5 from './min/webp/slider-5.webp';
+import slider__item_6 from './min/webp/slider-6.webp';
+
+
+
+
+
 
 const slider = (props) => {
 
@@ -21,23 +32,79 @@ const slider = (props) => {
         <section className="slider" onWheel={(e) => (props.onDeltaYhandler(e))}>
             <div className="swiper-container" data-swiper-parallax="-25%">
                 <div className="swiper-wrapper">
-                    <div className="swiper-slide" style={{ backgroundImage: `url(${item_1})` }}>
+                    {/* 1 */}
+                    <div className="swiper-slide" style={{ backgroundImage: `url(${slider__item_1})` }}>
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">
                                     <h2 data-swiper-parallax="-600" data-swiper-parallax-duration="1000" className="title title__h1 fs-62 c-white">
-                                    Наличие показательных <br/> интенсивных садов <br/> грецкого ореха с латера
+                                        Наличие показательных <br /> интенсивных садов <br /> грецкого ореха с латеральным подношением
                                     </h2>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="swiper-slide" style={{ backgroundImage: `url(${item_2})` }}>
+                    {/* 2 */}
+                    <div className="swiper-slide" style={{ backgroundImage: `url(${slider__item_2})` }}>
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">
                                     <h2 data-swiper-parallax="-600" data-swiper-parallax-duration="1000" className="title title__h1 fs-62 c-white">
-                                    Наличие показательных <br/> интенсивных садов <br/> грецкого ореха с латера
+                                        Семилетний ореховый сад
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* 3 */}
+                    <div className="swiper-slide" style={{ backgroundImage: `url(${slider__item_3})` }}>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <h2 data-swiper-parallax="-600" data-swiper-parallax-duration="1000" className="title title__h1 fs-62 c-white">
+                                        Однолетний сад
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* 4 */}
+                    <div className="swiper-slide" style={{ backgroundImage: `url(${slider__item_4})` }}>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <h2 data-swiper-parallax="-600" data-swiper-parallax-duration="1000" className="title title__h1 fs-62 c-white">
+                                        Однолетние саженцы <br /> грецкого ореха
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    {/* 5 */}
+                    <div className="swiper-slide" style={{ backgroundImage: `url(${slider__item_5})` }}>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <h2 data-swiper-parallax="-600" data-swiper-parallax-duration="1000" className="title title__h1 fs-62 c-white">
+                                        Саженцы грецкого ореха, <br /> подготовленные к продаже
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    {/* 6 */}
+                    <div className="swiper-slide" style={{ backgroundImage: `url(${slider__item_6})` }}>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <h2 data-swiper-parallax="-600" data-swiper-parallax-duration="1000" className="title title__h1 fs-62 c-white">
+                                        Орех грецкий на продажу
                                     </h2>
                                 </div>
                             </div>

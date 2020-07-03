@@ -28,7 +28,7 @@ const menu = (props) => {
                             <a href="./"><img src={logo} alt="logo" /></a>
                         </div>
 
-                        <div className="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                        <div className="col-lg-6 col-md-7 col-sm-7 col-xs-5">
                             <nav className="menu-nav">
                                 <ul className="menu-nav__ul fjc-c fai-c">
                                     <li className="menu-nav__ul_li">
@@ -40,20 +40,18 @@ const menu = (props) => {
                                     <li className="menu-nav__ul_li">
                                         <a className={ props.layers.count === 4 ? 'link c-green fs-14 menu-active' : 'link c-green fs-14' } href="#!"  onClick={() => {  
                                         props.onToggleLayersHandler(4)
-                                        // props.onGetServicesProdHandler()
                                         }}>Товары для сада</a>
                                     </li>
                                     <li className="menu-nav__ul_li">
                                         <a className={ props.layers.count === 5 ? 'link c-green fs-14 menu-active' : 'link c-green fs-14' } href="#!" onClick={() => { 
                                             props.onToggleLayersHandler(5)
-                                            // props.onGetServicesHandler()
                                         }}>Услуги</a>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
 
-                        <div className="col-lg-2 col-md-5 col-sm-5 col-xs-5">
+                        <div className="col-lg-3 col-md-3 col-sm-3 col-xs-5">
                             <div className="contact-info">
                                 <ul className="contact-info__ul">
                                     <li className="contact-info__ul_li fjc-c mb-10">
@@ -68,11 +66,12 @@ const menu = (props) => {
                             </div>
                         </div>
 
-                        <div className="col-lg-4 dsp-none_991">
+                        <div className="col-lg-2 dsp-none_1199">
                             <div className="button" onClick={() => (props.onViewModalHandler())}>
                                 <span className="button-learn-more" >
                                 {/* pt-10 pb-10 pr-10 pl-10 */}
-                                    <a href="#!" className="button-learn-more__a c-green-b fs-14">Свяжитесь с нами, чтобы узнать больше</a>
+                                    {/* <a href="#!" className="button-learn-more__a c-green-b fs-14">Свяжитесь с нами, чтобы узнать больше</a> */}
+                                    <a href="#!" className="button-learn-more__a c-green-b fs-14">Свяжитесь с нами</a>
                                 </span>
                             </div>
                         </div>

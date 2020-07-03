@@ -22,7 +22,7 @@ class Services extends React.Component {
 
 
         return (
-            <section className="services">
+            <section className="services-desc">
                 <div className="container">
                     <div className="row">
 
@@ -44,7 +44,7 @@ class Services extends React.Component {
                                 </div>
 
 
-                                <div className="services__desc mt-90">
+                                <div className="services-desc__desc mt-90">
 
                                     {
 
@@ -87,10 +87,10 @@ class Services extends React.Component {
                         </div>
 
                         <div className="col-lg-6">
-                            <div className="services-box">
+                            <div className="services-desc-box">
                                 {/* Выводим картинку */}
 
-                                <div className="services-box__img img-res" style={{ backgroundImage: `url(${this.props.services.servicesItemId.img})` }}></div>
+                                <div className="services-desc-box__img img-res" style={{ backgroundImage: `url(${this.props.services.servicesItemId.img})` }}></div>
 
                             </div>
                         </div>

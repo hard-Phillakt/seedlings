@@ -6,6 +6,10 @@ $f-consolas: "consolas";
 
     @media (max-width: 767px) {
         padding-top: 60px;
+
+        .button-rub {
+            transform: translateY(475px);
+        }
     }
 
     &-menu {
@@ -54,6 +58,10 @@ $f-consolas: "consolas";
             border-radius: 1em;
             height: 700px;
             width: 100%;
+
+            @media (max-width: 767px) {
+                height: 200px !important;
+            }
         }
 
     }
@@ -62,15 +70,29 @@ $f-consolas: "consolas";
         font-family: $f-consolas;
         font-size: 20px;
 
-        a {
-            display: inline-block;
-            color: #bdc3c7;
-            transition: all 0.3s ease-in-out;
+        @media (max-width: 767px) {
+            columns: 2;
+        }
 
-            &:hover {
-                color: #2e4914;
+        ul {
+
+
+            a {
+                display: inline-block;
+                color: #bdc3c7;
+                transition: all 0.3s ease-in-out;
+    
+                @media (max-width: 767px) {
+                    font-size: 18px;
+                }
+
+                &:hover {
+                    color: #2e4914;
+                }
             }
         }
+
+
 
         li {
             margin-bottom: 20px;
