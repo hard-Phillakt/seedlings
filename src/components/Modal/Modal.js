@@ -21,7 +21,7 @@ class Modal extends React.Component {
 
 
     viewCompon(param) {
-        // console.log(param);
+        console.log('Modal: ', param);
 
         switch (param) {
             case 'phone':
@@ -36,6 +36,10 @@ class Modal extends React.Component {
     }
 
     render() {
+
+            console.log(this.props.modal.viewBox);
+            
+
         return (
 
             <div className={this.props.modal.view ? 'modal-wrapp modal-visible' : 'modal-wrapp modal-hidden'} >
@@ -57,7 +61,9 @@ class Modal extends React.Component {
                                         <div className="col-lg-5">
                                             <div className="mb-40 mt-40">
                                                 <h3 className="title title__h3 fs-30 tac">
-                                                    <a href="#!" className="c-green-b" onClick={() => (this.props.onToggleComponentsModal('form'))} >Форма заявки</a>
+                                                    <a href="#!" 
+                                                    className={this.props.modal.viewBox === 'form' ? 'c-green-b modal-title-active' : 'c-green-b'} 
+                                                    onClick={() => (this.props.onToggleComponentsModal('form'))} >Форма заявки</a>
                                                 </h3>
                                             </div>
                                         </div>
@@ -65,7 +71,9 @@ class Modal extends React.Component {
                                         <div className="col-lg-6">
                                             <div className="mb-40 mt-40">
                                                 <h3 className="title title__h3 fs-30 tac">
-                                                    <a href="#!" className="c-green-b" onClick={() => (this.props.onToggleComponentsModal('phone'))} >Обратный звонок</a>
+                                                    <a href="#!" 
+                                                    className={this.props.modal.viewBox === 'phone' ? 'c-green-b modal-title-active' : 'c-green-b'} 
+                                                    onClick={() => (this.props.onToggleComponentsModal('phone'))} >Обратный звонок</a>
                                                 </h3>
                                             </div>
                                         </div>

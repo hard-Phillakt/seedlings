@@ -24,11 +24,11 @@ const menu = (props) => {
                 <div className="container">
                     <div className="row align-items-center">
 
-                        <div className="col-lg-1 col-md-2 col-sm-2 col-xs-2">
-                            <a href="./"><img src={logo} alt="logo" /></a>
+                        <div className="logo-wrapp col-lg-1 col-md-2 col-sm-12 col-xs-12">
+                            <a href="./" className="logo"><img src={logo} alt="logo" /></a>
                         </div>
 
-                        <div className="col-lg-6 col-md-7 col-sm-7 col-xs-5">
+                        <div className="col-lg-6 col-md-7 col-sm-12 col-xs-12">
                             <nav className="menu-nav">
                                 <ul className="menu-nav__ul fjc-c fai-c">
                                     <li className="menu-nav__ul_li">
@@ -51,7 +51,7 @@ const menu = (props) => {
                             </nav>
                         </div>
 
-                        <div className="col-lg-3 col-md-3 col-sm-3 col-xs-5">
+                        <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                             <div className="contact-info">
                                 <ul className="contact-info__ul">
                                     <li className="contact-info__ul_li fjc-c mb-10">

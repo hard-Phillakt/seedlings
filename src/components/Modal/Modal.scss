@@ -69,3 +69,20 @@
 .modal-times img {
     width: 30px;
 }
+
+.modal-title-active {
+    display: inline-flex;
+    position: relative;
+}
+
+.modal-title-active::before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0%;
+    width: 75%;
+    height: 4px;
+    border-radius: 1em;
+    background: #2e4914;
+    transition: all 0.5s ease-in-out;
+}

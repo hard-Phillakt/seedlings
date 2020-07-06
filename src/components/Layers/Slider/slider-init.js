@@ -17,7 +17,10 @@ window.onload = function () {
 			crossFade: true
 		},
 		speed: 500,
-		loop: true
+		loop: true,
+		autoplay: {
+			delay: 6000,
+		  },
 	});
 }
 

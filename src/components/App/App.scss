@@ -79,3 +79,13 @@ input,textarea, button {
     flex-direction: column;
     justify-content: space-between;
 }
+
+
+
+.all-layers, #root, body, .App, .main, .asortiment, .product, .services, .services-desc {
+    background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%) !important;
+
+    @media (max-width: 767px) {
+        // background: linear-gradient(180deg, #F2F5DB 0%, #F2F5DB 100%) !important;
+    }
+}

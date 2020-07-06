@@ -9,6 +9,23 @@ $f-consolas: "consolas";
     z-index: 4;
     // z-index: 6;
     background: #fff;
+
+    @media (max-width: 1400px) and (min-width: 992px) {
+        
+        padding-top: 105px !important;
+
+        .mt-90 {
+            margin-top: 30px;
+        }
+
+        .asortiment-box__img  {
+            height: 250px;
+        }
+
+        .asortiment-box__desc_scroll {
+
+        }
+    }
 }
 
 .product {
@@ -21,6 +38,24 @@ $f-consolas: "consolas";
     right: 0;
     z-index: 3;
     background: #fff;
+
+    
+    @media (max-width: 1400px) and (min-width: 992px) {
+        
+        padding-top: 105px !important;
+
+        .mt-90 {
+            margin-top: 30px;
+        }
+
+        .product-box__img  {
+            height: 250px;
+        }
+
+        .asortiment-box__desc_scroll {
+
+        }
+    }
 }
 
 .services {
@@ -33,6 +68,24 @@ $f-consolas: "consolas";
     right: 0;
     z-index: 2;
     background: #fff;
+
+    
+    @media (max-width: 1400px) and (min-width: 992px) {
+        
+        padding-top: 105px !important;
+
+        .mt-90 {
+            margin-top: 30px;
+        }
+
+        .services-box__img  {
+            height: 250px !important;
+        }
+
+        .asortiment-box__desc_scroll {
+
+        }
+    }
 }
 
 .product,

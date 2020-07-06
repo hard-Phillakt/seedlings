@@ -40,25 +40,25 @@ import Dots from '../../components/Dots/Dots';
 
 class App extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.refLayers = React.createRef(); 
+        this.refLayers = React.createRef();
     }
 
 
-    onScrollhandler(layers){
+    onScrollhandler(layers) {
 
-        if(layers){
+        if (layers) {
 
             const layersArr = layers.childNodes;
             const count = this.props.layers.count;
 
-            gsap.to(layersArr[count], {y: `0%`, duration: .6, opacity: 1, display: 'block'});
+            gsap.to(layersArr[count], { y: `0%`, duration: .6, opacity: 1, display: 'block' });
 
             for (let i = 0; i < layersArr.length; i++) {
-        
-                if(count !== i){
-                    gsap.to(layersArr[i], {y: `100%`, duration: .6, opacity: 0, display: 'none'});
+
+                if (count !== i) {
+                    gsap.to(layersArr[i], { y: `100%`, duration: .6, opacity: 0, display: 'none' });
                 }
 
             }
@@ -87,13 +87,20 @@ class App extends React.Component {
                 </section>
                 <Modal />
                 <Dots />
+                <div className="toggle-menu_wrap">
+                    <div className="toggle-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
             </section>
         )
     }
 }
 
 const mapStateToProps = (state) => {
-    return {...state}
+    return { ...state }
 }
 
 const mapDispatchToProps = (dispatch) => {

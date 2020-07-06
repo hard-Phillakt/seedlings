@@ -101,9 +101,9 @@ class Asortiment extends React.Component {
                                 <div className="asortiment-box__img img-res" style={{ backgroundImage: `url(${this.props.assort.getItemId.img})` }}></div>
 
                                 <div className="asortiment-box__desc">
-                                    <div className="asortiment-box__desc_scroll mt-30">
+                                    <div className="asortiment-box__desc_scroll mt-30" dangerouslySetInnerHTML={{__html: this.props.assort.getItemId.text}}>
                                         {/* Выводим текст */}
-                                        {this.props.assort.getItemId.text}
+                                        {/* {this.props.assort.getItemId.text} */}
                                     </div>
                                 </div>
                             </div>

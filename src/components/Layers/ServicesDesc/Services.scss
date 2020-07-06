@@ -4,12 +4,31 @@ $f-consolas: "consolas";
     height: 100vh;
     padding-top: 150px;
 
+
+    @media (max-width: 1400px) and (min-width: 992px) {
+        
+        padding-top: 105px !important;
+
+        .mt-90 {
+            margin-top: 30px;
+        }
+
+        .services-desc-box__img {
+            height: 530px !important;
+        }
+
+        .services-desc-box__img {
+            background-position: center top;
+        }
+    }
+
     @media (max-width: 767px) {
+        height: auto;
         padding-top: 60px;
 
 
         .button-rub {
-            transform: translateY(280px);
+            transform: translateY(265px);
         }
     }
 

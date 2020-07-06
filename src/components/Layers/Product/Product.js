@@ -68,8 +68,9 @@ class Product extends React.Component {
                                 </div>
 
                                 <div className="asortiment-box__desc">
-                                    <div className="asortiment-box__desc_scroll mt-30">
-                                        {this.props.assort.getItemsSelectId.text}
+                                    <div className="asortiment-box__desc_scroll mt-30" dangerouslySetInnerHTML={{__html: this.props.assort.getItemsSelectId.text}}>
+                                        {/* {this.props.assort.getItemsSelectId.text} */}
+                                        
                                         {/* <p className="c-green-b">
                                         Описание растения:
                                     </p>

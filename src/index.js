@@ -21,4 +21,30 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+
+var menu_nav__ul_li_a = document.querySelectorAll('.menu-nav__ul_li a ');
+var toggle_menu_wrap = document.querySelector('.toggle-menu_wrap');
+var menu = document.querySelector('.menu');
+
+toggle_menu_wrap.onclick = function () {
+
+  if (menu.classList.value == 'menu') {
+    menu.classList.add('open-menu')
+  } else {
+    menu.classList.remove('open-menu')
+  }
+}
+
+
+
+menu_nav__ul_li_a.forEach((item, i) => {
+  item.onclick = function () {
+    if (menu.classList.value == 'menu') {
+      menu.classList.add('open-menu')
+    } else {
+      menu.classList.remove('open-menu')
+    }
+  }
+})
+
 serviceWorker.unregister();

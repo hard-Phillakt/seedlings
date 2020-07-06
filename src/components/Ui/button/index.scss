@@ -27,12 +27,10 @@ $f-consolas: "Consolas";
         padding: 3px 0px;
 
         @media (max-width: 767px) {
-            transform: translateY(495px);
+            transform: translateY(465px);
             position: relative;
             z-index: 99;
         }
-    
-
 
         span {
             display: inline-flex;
