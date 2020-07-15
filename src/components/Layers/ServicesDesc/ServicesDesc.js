@@ -22,11 +22,11 @@ class Services extends React.Component {
 
 
         return (
-            <section className="services-desc">
+            <section id="services-desc" className="services-desc">
                 <div className="container">
                     <div className="row">
 
-                        <div className="col-lg-6 flex-stretching" onWheel={(e) => (this.props.onDeltaYhandler(e))}>
+                        <div className="col-lg-6 flex-stretching" onWheel={window.innerWidth > 1400 ? (e) => (this.props.onDeltaYhandler(e)) : null}>
 
                             <div>
                                 <div className="row">

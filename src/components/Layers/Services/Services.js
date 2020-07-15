@@ -22,11 +22,11 @@ class Services extends React.Component {
 
 
         return (
-            <section className="services">
+            <section id="services" className="services">
                 <div className="container">
                     <div className="row">
 
-                        <div className="col-lg-6 flex-stretching" onWheel={(e) => (this.props.onDeltaYhandler(e))}>
+                        <div className="col-lg-6 flex-stretching" onWheel={window.innerWidth > 1400 ? (e) => (this.props.onDeltaYhandler(e)) : null}>
 
                             <div>
                                 <div className="row">
@@ -86,9 +86,9 @@ class Services extends React.Component {
 
                                     </div>
                                     <div className="asortiment-box__desc">
-                                        <div className="asortiment-box__desc_scroll mt-30">
+                                        <div className="asortiment-box__desc_scroll mt-30" dangerouslySetInnerHTML={{__html: this.props.services.servicesProductsId.text}}>
                                             {/* Выводим текст */}
-                                            {this.props.services.servicesProductsId.text}
+                                            {/* {this.props.services.servicesProductsId.text} */}
                                         </div>
                                     </div>
                                 </div>

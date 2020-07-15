@@ -1,7 +1,7 @@
 
 const initState = {
     count: 0,
-    layers: [0, 1, 2, 3, 4, 5]
+    layers: [0, 1, 2, 3, 4, 5, 6]
 }
 
 const layers = (state = initState, action) => {
@@ -13,7 +13,7 @@ const layers = (state = initState, action) => {
 
             if(num === 1){
 
-                if (state.count >= 5) {
+                if (state.count >= 6) {
                     return {
                         ...state,
                         count: 0
@@ -29,7 +29,7 @@ const layers = (state = initState, action) => {
                 if (state.count <= 0) {
                     return {
                         ...state,
-                        count: 5
+                        count: 6
                     }
                 }
 

@@ -1,0 +1,75 @@
+$f-consolas: "Consolas";
+
+.contact {
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 6;
+    // z-index: 2;
+    // background: #fff;
+    padding-top: 150px;
+    background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%);
+
+
+    &__logo {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        margin-bottom: 30px;
+
+        
+        @media (max-width: 767px) {
+            text-align: center;
+        }
+    }
+
+
+    @media (max-width: 1400px) {
+        height: auto;
+        position: inherit;
+        width: 100%;
+        z-index: auto;
+        // z-index: 2;
+        // background: #fff;
+        padding: 60px 0;
+        background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%);
+    }
+
+
+    @media (max-width: 767px) {
+        // padding-top: 0;
+        padding: 30px 0;
+    }
+
+    .description__md {
+
+        @media (max-width: 767px) {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &-bg {
+    }
+
+
+    &__list {
+
+        
+        span, a {
+            font-family: $f-consolas;
+            display: flex;
+            align-items: flex-start;
+            color: #2E4914;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+    }
+
+    iframe {
+        margin-top: 30px;
+    }
+}

@@ -34,6 +34,7 @@ import Asortiment from '../Layers/Asortiment/Asortiment';
 import Services from '../Layers/Services/Services';
 import ServicesDesc from '../Layers/ServicesDesc/ServicesDesc';
 import Product from '../Layers/Product/Product';
+import Contact from '../Layers/Contact/Contact';
 import Modal from '../../components/Modal/Modal';
 import Dots from '../../components/Dots/Dots';
 
@@ -71,7 +72,12 @@ class App extends React.Component {
 
         //  Ждем пока DOM отрендерится (костыль)
         setTimeout(() => {
-            this.onScrollhandler(this.refLayers.current)
+
+            // Убираем одноэкранники для ноутбуков и мобильных
+            if(window.innerWidth > 1400){
+                this.onScrollhandler(this.refLayers.current)
+            }
+
         }, 100)
 
         return (
@@ -84,6 +90,7 @@ class App extends React.Component {
                     <Product />
                     <Services />
                     <ServicesDesc />
+                    <Contact />
                 </section>
                 <Modal />
                 <Dots />

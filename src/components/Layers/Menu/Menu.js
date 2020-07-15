@@ -32,20 +32,24 @@ const menu = (props) => {
                             <nav className="menu-nav">
                                 <ul className="menu-nav__ul fjc-c fai-c">
                                     <li className="menu-nav__ul_li">
-                                        <a className={ props.layers.count === 2 ? 'link c-green fs-14 menu-active' : 'link c-green fs-14' } href="#!" onClick={() => (props.onToggleLayersHandler(2))}>Ассортимент</a>
+                                        <a className={ props.layers.count === 2 ? 'link c-green fs-14 menu-active' : 'link c-green fs-14' } href="#asortiment" 
+                                        onClick={ window.innerWidth > 1400 ? () => (props.onToggleLayersHandler(2)) : null }>Ассортимент</a>
                                     </li>
                                     <li className="menu-nav__ul_li">
-                                        <a className={ props.layers.count === 3 ? 'link c-green fs-14 menu-active' : 'link c-green fs-14' } href="#!" onClick={() => (props.onToggleLayersHandler(3))}>Продукция</a>
+                                        <a className={ props.layers.count === 3 ? 'link c-green fs-14 menu-active' : 'link c-green fs-14' } href="#product" 
+                                        onClick={ window.innerWidth > 1400 ? () => (props.onToggleLayersHandler(3)) : null }>Продукция</a>
                                     </li>
                                     <li className="menu-nav__ul_li">
-                                        <a className={ props.layers.count === 4 ? 'link c-green fs-14 menu-active' : 'link c-green fs-14' } href="#!"  onClick={() => {  
-                                        props.onToggleLayersHandler(4)
-                                        }}>Товары для сада</a>
+                                        <a className={ props.layers.count === 4 ? 'link c-green fs-14 menu-active' : 'link c-green fs-14' } href="#services"  
+                                        onClick={ window.innerWidth > 1400 ? () => {  props.onToggleLayersHandler(4)} : null }>Товары для сада</a>
                                     </li>
                                     <li className="menu-nav__ul_li">
-                                        <a className={ props.layers.count === 5 ? 'link c-green fs-14 menu-active' : 'link c-green fs-14' } href="#!" onClick={() => { 
-                                            props.onToggleLayersHandler(5)
-                                        }}>Услуги</a>
+                                        <a className={ props.layers.count === 5 ? 'link c-green fs-14 menu-active' : 'link c-green fs-14' } href="#services-desc" 
+                                        onClick={ window.innerWidth > 1400 ? () => { props.onToggleLayersHandler(5) } : null}>Услуги</a>
+                                    </li>
+                                    <li className="menu-nav__ul_li">
+                                        <a className={ props.layers.count === 6 ? 'link c-green fs-14 menu-active' : 'link c-green fs-14' } href="#contact" 
+                                        onClick={ window.innerWidth > 1400 ? () => { props.onToggleLayersHandler(6) } : null}>Контакты</a>
                                     </li>
                                 </ul>
                             </nav>

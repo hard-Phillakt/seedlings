@@ -4,11 +4,20 @@ $f-consolas: "consolas";
     height: 100vh;
     padding-top: 150px;
 
+    @media (max-width: 1400px) {
+        height: auto;
+        position: inherit;
+        width: 100%;
+        z-index: auto;
+        background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%);
+        padding: 60px 0 !important;
+    }
+
     @media (max-width: 767px) {
-        padding-top: 60px;
+        // padding-top: 60px;
 
         .button-rub {
-            transform: translateY(475px);
+            transform: translateY(585px);
         }
     }
 
@@ -60,7 +69,7 @@ $f-consolas: "consolas";
             width: 100%;
 
             @media (max-width: 767px) {
-                height: 200px !important;
+                height: 300px !important;
             }
         }
 

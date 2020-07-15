@@ -18,7 +18,8 @@
     "redux": "^4.0.5",
     "sass": "^1.26.7",
     "swiper": "^5.4.1",
-    "validator": "^13.1.1"
+    "validator": "^13.1.1",
+    "ymaps": "^0.2.1"
   },
   "scripts": {
     "start": "react-scripts start",

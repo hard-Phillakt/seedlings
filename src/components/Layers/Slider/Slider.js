@@ -6,7 +6,6 @@ import './slider-init';
 import item_1 from './img/slider__item_1.png';
 import item_2 from './img/slider__item_2.png';
 
-
 // import slider__item_1 from './min/slider__item_1.jpg'; // Все виды посадочных работ
 // import slider__item_2 from './min/slider__item_2.jpg'; // Доставка
 // import slider__item_3 from './min/slider__item_3.jpg'; // Консультационные услуги 2
@@ -20,16 +19,10 @@ import slider__item_4 from './min/webp/slider-4.webp';
 import slider__item_5 from './min/webp/slider-5.webp';
 import slider__item_6 from './min/webp/slider-6.webp';
 
-
-
-
-
-
 const slider = (props) => {
 
-
     return (
-        <section className="slider" onWheel={(e) => (props.onDeltaYhandler(e))}>
+        <section id="slider" className="slider" onWheel={ window.innerWidth > 1400 ? (e) => (props.onDeltaYhandler(e)) : null }>
             <div className="swiper-container" data-swiper-parallax="-25%">
                 <div className="swiper-wrapper">
                     {/* 1 */}
@@ -38,8 +31,14 @@ const slider = (props) => {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <h2 data-swiper-parallax="-600" data-swiper-parallax-duration="1000" className="title title__h1 fs-62 c-white">
-                                        Наличие показательных <br /> интенсивных садов <br /> грецкого ореха с латеральным подношением
+                                        Наличие показательных <br /> интенсивных садов <br /> грецкого ореха с латеральным плодоношением
                                     </h2>
+                                    <div className="mt-20 mb-20"  data-swiper-parallax="-600" data-swiper-parallax-duration="1000">
+                                        <a 
+                                            target="_blank"
+                                            className="youtube-link"
+                                            href="https://www.youtube.com/watch?v=PtNufHABafU&feature=youtu.be">Посмотреть видео на youtube</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

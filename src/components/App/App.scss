@@ -85,7 +85,21 @@ input,textarea, button {
 .all-layers, #root, body, .App, .main, .asortiment, .product, .services, .services-desc {
     background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%) !important;
 
+    @media (max-width: 1400px) {
+        background: linear-gradient(180deg, #F2F5DB 0%, #F2F5DB 100%) !important;
+    }
+}
+
+
+.goods-title {
+    font-size: 22px;
+    margin: 15px 0 15px 21px;
+
+
     @media (max-width: 767px) {
-        // background: linear-gradient(180deg, #F2F5DB 0%, #F2F5DB 100%) !important;
+
+
+        font-size: 16px;
+        margin: 5px 0 5px 12px;
     }
 }

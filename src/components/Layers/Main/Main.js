@@ -12,7 +12,7 @@ class Main extends React.Component {
     render() {
 
         return (
-            <section className="main" onWheel={(e) => (this.props.onDeltaYhandler(e))}>
+            <section id="main" className="main" onWheel={ window.innerWidth > 1400 ? (e) => (this.props.onDeltaYhandler(e)) : null }>
             {/* <section className="main" > */}
                 <div className="main-bg">
                     <div className="container">
@@ -27,22 +27,21 @@ class Main extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12 tac">
-                            <div className="mt-50 pl-30 pt-10 pb-10">
-                                <div className="description description__md fs-26 c-black-light mb-20">
-                                    Поставка саженцев грецкого ореха из специализированного 
-                                </div>
-                                <div className="description description__md fs-26 c-black-light mb-20">
+                            <div className="mt-50 mb-50 pl-30 pt-10 pb-10">
+                                <div className="description description__md fs-26 c-black-light mb-10">
+                                    Поставка саженцев грецкого ореха из специализированного <br/>
                                     орехового питомника более чем с 20-ти летним опытом селекционной работы
                                 </div>
-                                <div className="description description__md fs-26 c-black-light mb-20">
+
+                                <div className="description description__md fs-26 c-black-light mb-10">
                                     Гарантия приживаемости и соответствия сорта
                                 </div>
-                                <div className="description description__md fs-26 c-black-light mb-20">
+                                <div className="description description__md fs-26 c-black-light mb-10">
                                     Услуги по созданию и реализации проекта орехового сада
                                 </div>
-                                <div className="description description__md fs-26 c-black-light">
+                                {/* <div className="description description__md fs-26 c-black-light">
                                     Белгородский район, с Никольское, ул. Пролетарская, з/у 18.
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>

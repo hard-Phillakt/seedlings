@@ -12,14 +12,14 @@ $f-consolas: "consolas";
 
     @media (max-width: 1400px) and (min-width: 992px) {
         
-        padding-top: 105px !important;
+        padding: 60px 0 !important;
 
         .mt-90 {
             margin-top: 30px;
         }
 
         .asortiment-box__img  {
-            height: 250px;
+            // height: 250px;
         }
 
         .asortiment-box__desc_scroll {
@@ -38,18 +38,17 @@ $f-consolas: "consolas";
     right: 0;
     z-index: 3;
     background: #fff;
-
     
     @media (max-width: 1400px) and (min-width: 992px) {
         
-        padding-top: 105px !important;
+        padding: 60px 0 !important;
 
         .mt-90 {
             margin-top: 30px;
         }
 
         .product-box__img  {
-            height: 250px;
+            // height: 250px;
         }
 
         .asortiment-box__desc_scroll {
@@ -60,7 +59,7 @@ $f-consolas: "consolas";
 
 .services {
     height: 100vh;
-    padding-top: 150px;
+    padding-top: 0;
     position: absolute;
     width: 100%;
     top: 0;
@@ -68,18 +67,17 @@ $f-consolas: "consolas";
     right: 0;
     z-index: 2;
     background: #fff;
-
     
     @media (max-width: 1400px) and (min-width: 992px) {
         
-        padding-top: 105px !important;
+        padding: 60px 0 !important;
 
         .mt-90 {
             margin-top: 30px;
         }
 
         .services-box__img  {
-            height: 250px !important;
+            // height: 250px !important;
         }
 
         .asortiment-box__desc_scroll {
@@ -93,6 +91,16 @@ $f-consolas: "consolas";
 .asortiment {
     height: 100vh;
     padding-top: 150px;
+
+    @media (max-width: 1400px) {
+        height: auto;
+        position: inherit;
+        width: 100%;
+        z-index: auto;
+        padding-top: 0;
+        background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%);
+        padding-bottom: 60px;
+    }
 
     @media (max-width: 767px) {
         padding-top: 60px;
@@ -164,7 +172,7 @@ $f-consolas: "consolas";
             width: 100%;
 
             @media (max-width: 767px) {
-                height: 200px;
+                height: 300px;
             }
             
         }

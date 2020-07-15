@@ -4,10 +4,16 @@
     top: 40%;
     z-index: 999;
 
+    @media (max-width: 1400px) {
+        display: none;
+    }
+
     @media (max-width: 767px) {
+        display: none;
+
         position: fixed;
         right: 85px;
-        top: -10%;
+        top: -70px;
         z-index: 999;
         transform: rotate(-90deg);
     }

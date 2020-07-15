@@ -19,7 +19,7 @@ window.onload = function () {
 		speed: 500,
 		loop: true,
 		autoplay: {
-			delay: 6000,
+			delay: 3000,
 		  },
 	});
 }

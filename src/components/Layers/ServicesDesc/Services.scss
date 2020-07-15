@@ -4,10 +4,19 @@ $f-consolas: "consolas";
     height: 100vh;
     padding-top: 150px;
 
+    @media (max-width: 1400px) {
+        height: auto;
+        position: inherit;
+        width: 100%;
+        z-index: auto;
+        background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%);
+        padding: 60px 0 !important;
+    }
+
 
     @media (max-width: 1400px) and (min-width: 992px) {
         
-        padding-top: 105px !important;
+        // padding-top: 105px !important;
 
         .mt-90 {
             margin-top: 30px;
@@ -28,7 +37,7 @@ $f-consolas: "consolas";
 
 
         .button-rub {
-            transform: translateY(265px);
+            transform: translateY(595px);
         }
     }
 
@@ -85,8 +94,8 @@ $f-consolas: "consolas";
             width: 100%;
 
             @media (max-width: 767px) {
-                height: 200px;
-                background-position: center;
+                height: 500px;
+                background-position: 0% 0%;
             }
         }
 

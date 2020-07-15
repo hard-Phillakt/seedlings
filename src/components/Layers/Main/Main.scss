@@ -12,6 +12,19 @@
     padding-top: 100px;
     background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%);
 
+
+    @media (max-width: 1400px) {
+        height: auto;
+        position: inherit;
+        width: 100%;
+        z-index: auto;
+        // z-index: 2;
+        // background: #fff;
+        padding-top: 100px;
+        background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%);
+    }
+
+
     @media (max-width: 767px) {
         padding-top: 0;
     }
@@ -20,7 +33,7 @@
 
         @media (max-width: 767px) {
             font-size: 20px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
     }
 
@@ -35,7 +48,7 @@
 
 
         @media (max-width: 1400px) and (min-width: 991px) {
-            height: 285px;
+            height: 340px;
         }
 
         @media (max-width: 767px) and (min-width: 200px) {

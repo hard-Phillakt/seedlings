@@ -18,7 +18,7 @@ const ButtonArr = (props) => {
 
                 $.ajax({
                     method: 'GET',
-                    url: 'http://orekh31/mailer',
+                    url: '/mailer',
                     data: {
                         name: props.modal.phoneBox.name,
                         tel: props.modal.phoneBox.tel
@@ -47,7 +47,7 @@ const ButtonArr = (props) => {
 
                 $.ajax({
                     method: 'GET',
-                    url: 'http://orekh31/mailer',
+                    url: '/mailer',
                     data: {
                         comment: props.modal.formBox.comment,
                         email: props.modal.formBox.email,

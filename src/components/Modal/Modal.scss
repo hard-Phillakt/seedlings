@@ -47,6 +47,10 @@
     background: #F2F5DB;
     border-radius: 26px;
 
+    @media (max-width: 1400px) {
+        width: 60%;
+    }
+
     @media (max-width: 767px) {
         width: 90%;
     }
@@ -56,6 +60,12 @@
     border: 1px solid #2E4914;
     background: #F2F5DB;
     border-radius: 26px;
+
+    @media (max-width: 767px) {
+        overflow: scroll;
+        height: 400px;
+    }
+
 }
 
 .modal-times {
