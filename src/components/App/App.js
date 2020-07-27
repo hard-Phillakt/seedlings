@@ -74,7 +74,7 @@ class App extends React.Component {
         setTimeout(() => {
 
             // Убираем одноэкранники для ноутбуков и мобильных
-            if(window.innerWidth > 1400){
+            if(window.innerWidth > 14000){
                 this.onScrollhandler(this.refLayers.current)
             }
 

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003" xml:space="preserve" width="45.5528mm" height="31.8703mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 848.49 593.63">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#EEEDEE;fill-rule:nonzero}
+    .fil2 {fill:#D62628;fill-rule:nonzero}
+    .fil1 {fill:#2787C8;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2530008161488">
+   <path class="fil0" d="M-0 39.48l0 158.42 848.49 0 0 -158.42c0,-21.8 -17.68,-39.48 -39.49,-39.48l-769.5 0c-21.82,0 -39.5,17.68 -39.5,39.48z"/>
+   <polygon class="fil1" points="-0,395.77 848.49,395.77 848.49,197.9 -0,197.9 "/>
+   <path class="fil2" d="M-0 554.14c0,21.8 17.68,39.5 39.5,39.5l769.5 0c21.81,0 39.49,-17.7 39.49,-39.5l0 -158.36 -848.49 0 0 158.36z"/>
+  </g>
+ </g>
+</svg>

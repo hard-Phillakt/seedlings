@@ -1,7 +1,7 @@
 
 .main {
     height: 100vh;
-    position: absolute;
+    // position: absolute;
     width: 100%;
     top: 0;
     left: 0;
@@ -13,19 +13,29 @@
     background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%);
 
 
-    @media (max-width: 1400px) {
+    @media (max-width: 1400px) and (min-width: 992px) {
         height: auto;
         position: inherit;
         width: 100%;
-        z-index: auto;
-        // z-index: 2;
+        z-index: 0;
         // background: #fff;
-        padding-top: 100px;
+        padding-top: 82px;
         background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%);
+
+
+        .mt-50.mb-50.pl-30.pt-10.pb-10 {
+            margin: 15px 0;
+        }
     }
 
 
-    @media (max-width: 767px) {
+    @media (max-width: 992px) {
+        height: auto;
+        position: inherit;
+        width: 100%;
+        z-index: 0;
+        padding-top: 100px;
+        background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%);
         padding-top: 0;
     }
 
@@ -48,12 +58,14 @@
 
 
         @media (max-width: 1400px) and (min-width: 991px) {
-            height: 340px;
+            height: 350px;
         }
 
         @media (max-width: 767px) and (min-width: 200px) {
-            height: 370px;
+            background: url("../Main/img/main-m.png") no-repeat;
+            height: 200px;
             background-position: center;
+            background-size: cover;
         }
 
         &::before {

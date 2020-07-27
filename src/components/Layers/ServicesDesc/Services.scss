@@ -5,25 +5,27 @@ $f-consolas: "consolas";
     padding-top: 150px;
 
     @media (max-width: 1400px) {
-        height: auto;
+        height: 100vh;
         position: inherit;
         width: 100%;
         z-index: auto;
-        background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%);
-        padding: 60px 0 !important;
+        background: linear-gradient(180deg, #F2F5DB 0%, #F2F5DB 100%);
+        display: flex;
+        align-items: center;
     }
 
 
     @media (max-width: 1400px) and (min-width: 992px) {
         
-        // padding-top: 105px !important;
+        align-items: flex-start;
+        padding-top: 110px;
 
         .mt-90 {
             margin-top: 30px;
         }
 
         .services-desc-box__img {
-            height: 530px !important;
+            height: 350px !important;
         }
 
         .services-desc-box__img {
@@ -32,14 +34,15 @@ $f-consolas: "consolas";
     }
 
     @media (max-width: 767px) {
+        padding-top: 30px;
+        margin-top: 30px;
         height: auto;
-        padding-top: 60px;
-
 
         .button-rub {
-            transform: translateY(595px);
+            transform: translateY(375px);
         }
     }
+
 
     &-menu {
         font-family: $f-consolas;
@@ -80,6 +83,12 @@ $f-consolas: "consolas";
         border: 1px solid #2e4914;
         border-radius: 1em;
 
+        @media (max-width: 1400px) and (min-width: 992px) {
+            width: 70%;
+            margin: 0 auto;
+        }
+        
+
         @media (max-width: 767px) {
             transform: translateY(-75px);
         }
@@ -94,8 +103,9 @@ $f-consolas: "consolas";
             width: 100%;
 
             @media (max-width: 767px) {
-                height: 500px;
-                background-position: 0% 0%;
+                height: 300px;
+                background-position: center;
+                background-size: cover;
             }
         }
 

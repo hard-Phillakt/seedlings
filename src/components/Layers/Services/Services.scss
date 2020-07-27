@@ -2,22 +2,19 @@ $f-consolas: "consolas";
 
 .services {
     height: 100vh;
-    padding-top: 150px;
 
     @media (max-width: 1400px) {
-        height: auto;
         position: inherit;
         width: 100%;
         z-index: auto;
-        background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%);
-        padding: 60px 0 !important;
     }
 
     @media (max-width: 767px) {
-        // padding-top: 60px;
+        padding-top: 30px;
+        height: auto;
 
         .button-rub {
-            transform: translateY(585px);
+            transform: translateY(570px);
         }
     }
 
@@ -65,8 +62,12 @@ $f-consolas: "consolas";
             background-size: cover;
             background-position: center;
             border-radius: 1em;
-            height: 700px;
+            height: 400px;
             width: 100%;
+
+            @media (max-width: 1400px) and (min-width: 768px) {
+                height: 240px !important;
+            }
 
             @media (max-width: 767px) {
                 height: 300px !important;
@@ -78,6 +79,11 @@ $f-consolas: "consolas";
     &__desc {
         font-family: $f-consolas;
         font-size: 20px;
+
+        @media (max-width: 1400px) and (min-width: 768px) {
+            margin-bottom: 30px;
+        }
+
 
         @media (max-width: 767px) {
             columns: 2;
@@ -105,6 +111,10 @@ $f-consolas: "consolas";
 
         li {
             margin-bottom: 20px;
+
+            @media (max-width: 1400px) and (min-width: 992px) {
+                margin-bottom: 10px;
+            }
         }
 
         p {

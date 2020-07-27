@@ -37,7 +37,8 @@ const slider = (props) => {
                                         <a 
                                             target="_blank"
                                             className="youtube-link"
-                                            href="https://www.youtube.com/watch?v=PtNufHABafU&feature=youtu.be">Посмотреть видео на youtube</a>
+                                            // href="https://www.youtube.com/watch?v=PtNufHABafU&feature=youtu.be">Посмотреть видео на youtube</a>
+                                            href="https://youtu.be/iOoPp3GjVrE">Посмотреть видео на youtube</a>
                                     </div>
                                 </div>
                             </div>

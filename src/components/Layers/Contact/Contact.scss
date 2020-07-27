@@ -2,7 +2,7 @@ $f-consolas: "Consolas";
 
 .contact {
     height: 100vh;
-    position: absolute;
+    // position: absolute;
     width: 100%;
     top: 0;
     left: 0;
@@ -11,14 +11,15 @@ $f-consolas: "Consolas";
     // z-index: 2;
     // background: #fff;
     padding-top: 150px;
-    background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%);
-
+    // background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%);
+    background: linear-gradient(180deg, #F2F5DB 0%, #F2F5DB 100%) !important;
 
     &__logo {
         // display: flex;
         // justify-content: center;
         // align-items: center;
         margin-bottom: 30px;
+        text-align: center;
 
         
         @media (max-width: 767px) {
@@ -27,21 +28,31 @@ $f-consolas: "Consolas";
     }
 
 
-    @media (max-width: 1400px) {
-        height: auto;
+    @media (max-width: 1400px) and (min-width: 992px) {
+        height: 100vh;
         position: inherit;
         width: 100%;
         z-index: auto;
         // z-index: 2;
         // background: #fff;
-        padding: 60px 0;
+        padding: 120px 0 60px 0;
         background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%);
     }
 
-
+    @media (max-width: 992px) {
+        height: 100vh;
+        position: inherit;
+        width: 100%;
+        z-index: auto;
+        // z-index: 2;
+        // background: #fff;
+        padding: 120px 0 60px 0;
+        background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%);
+    }
+    
     @media (max-width: 767px) {
-        // padding-top: 0;
-        padding: 30px 0;
+        padding-top: 30px;
+        margin-top: 30px;
     }
 
     .description__md {
@@ -65,11 +76,20 @@ $f-consolas: "Consolas";
             align-items: flex-start;
             color: #2E4914;
             font-size: 22px;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
+
+            @media (max-width: 767px) {
+                font-size: 17px;
+                margin-bottom: 10px;
+            }
         }
     }
 
     iframe {
         margin-top: 30px;
+
+        @media (max-width: 1400px) and (min-width: 992px) {
+            height: 250px;
+        }
     }
 }

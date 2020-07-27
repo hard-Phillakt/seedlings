@@ -1,8 +1,21 @@
 
-::-webkit-scrollbar {
-    width: 0px;  
-    background: transparent;
+// body::-webkit-scrollbar {
+//     width: 0.5em;  
+//     background: #2e4914;
+// }
+
+body::-webkit-scrollbar {
+    width: 0.5em;
 }
+
+body::-webkit-scrollbar-thumb {
+    background-color: #2e491482;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(230, 116, 48, 0.05);
+}
+
 
 * {
     margin: 0;
@@ -77,16 +90,32 @@ input,textarea, button {
 .flex-stretching {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
+
+    @media (min-width: 1401px) {
+        justify-content: space-between;
+    }
 }
 
 
 
-.all-layers, #root, body, .App, .main, .asortiment, .product, .services, .services-desc {
-    background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%) !important;
+.all-layers, #root, body, .App, .main, .asortiment, .product, .services, .services-desc .contact {
+    // background: linear-gradient(180deg, #F2F5DB 0%, #FFFFFF 100%) !important;
+    background: linear-gradient(180deg, #F2F5DB 0%, #F2F5DB 100%) !important;
 
     @media (max-width: 1400px) {
         background: linear-gradient(180deg, #F2F5DB 0%, #F2F5DB 100%) !important;
+    }
+}
+
+@media (max-width: 1400px) and (min-width: 992px) {
+    .asortiment, .product, .services, .services-desc {
+        height: inherit !important;
+    }
+
+    .contact {
+        height: 700px !important;
+        padding: 130px 0 60px 0 !important;
     }
 }
 
@@ -101,5 +130,11 @@ input,textarea, button {
 
         font-size: 16px;
         margin: 5px 0 5px 12px;
+    }
+}
+
+.mt-90 {
+    @media (max-width: 767px) {
+        margin-top: 30px !important;
     }
 }

@@ -4,6 +4,7 @@
 import servicesOne_1 from '../components/Layers/Services/services_one/min/services_one_1.png'; // Доставка 
 import servicesOne_2 from '../components/Layers/Services/services_one/min/services_one_2.png'; // Все виды посадочных работ
 import servicesOne_3 from '../components/Layers/Services/services_one/min/services_one_3.png'; // Консультационные услуги 2
+import servicesOne_3m from '../components/Layers/Services/services_one/min/services_one_3-m.png'; // Консультационные услуги 2 mobile
 import servicesOne_4 from '../components/Layers/Services/services_one/min/services_one_4.png'; // Техническое сопровождение
 import servicesOne_5 from '../components/Layers/Services/services_one/min/services_one_5.png'; // Формирование кроны
 
@@ -66,7 +67,7 @@ const initToggleBlocks = {
                     <span>- Разработка карт по внесению подкормки</span></br>
                     <span>- Борьба с вредителями</span></br>
                     `,
-                    img: `${servicesOne_3}`,
+                    img: `${window.innerWidth > 1400 ? servicesOne_3 : servicesOne_3m}`,
                 },
                 {
                     title: `
@@ -108,7 +109,7 @@ const initToggleBlocks = {
                     <span>- Разработка карт по внесению подкормки</span></br>
                     <span>- Борьба с вредителями</span></br>
                     `,
-                    img: `${servicesOne_3}`,
+                    img: `${window.innerWidth > 767 ? servicesOne_3 : servicesOne_3m}`,
                 },
                 {
                     title: `
@@ -126,11 +127,6 @@ const initToggleBlocks = {
         `,
         img: `${servicesOne_1}`
     },
-
-
-
-
-
 
 
     // Выбранный товар
@@ -408,7 +404,7 @@ const initToggleBlocks = {
         {
             title: "Феромонные ловушки для насекомых - вредителей",
             type: "raspberry-blackberry",
-            img: `${services__item_10}`,
+            img: `${services__item_9}`,
             text: `
             <h3 class="goods-title">Феромонные ловушки для насекомых - вредителей</h3><span class="ml-20"></span>
             <span class="ml-10">Феромонные ловушки – это эффективное современное средство отлова и уничтожения садовых вредителей, таких как плодожерки, стеклянницы, совки, жуки, листовертки. Феромонные ловушки позволяют так же определять начало сезона размножения вредителей. Для создания подобных ловушек используется феромон – синтетический аналог химического вещества, выделяемого вредителями определенного вида и помогающего им отличать особей своего вида и пола от других. Механизм действия феромонной ловушки основан на заманивании насекомых и мотыльков при помощи определенных запахов – феромонов, в специальные ловушки. Что способствует гибели вредителей данного вида и препятствует их дальнейшему размножению и распространению.</span>

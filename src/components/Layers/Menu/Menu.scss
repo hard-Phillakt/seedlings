@@ -60,6 +60,10 @@ $f-consolas: "Consolas";
     &-wrap {
         padding: 14px 0;
 
+        @media (max-width: 1400px) and (min-width: 992px) {
+            padding: 5px 0;
+        }
+
         .row {
 
             @media (max-width: 992px) {

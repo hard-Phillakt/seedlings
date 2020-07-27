@@ -82,7 +82,7 @@ class Services extends React.Component {
                                 {/* Выводим картинку */}
 
                                 <div>
-                                    <div className="services-box__img img-res" style={{ height: 400, backgroundImage: `url(${this.props.services.servicesProductsId.img})` }}>
+                                    <div className="services-box__img img-res" style={{ backgroundImage: `url(${this.props.services.servicesProductsId.img})` }}>
 
                                     </div>
                                     <div className="asortiment-box__desc">

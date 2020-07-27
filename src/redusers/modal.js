@@ -98,7 +98,7 @@ const modal = (state = initToggleComp, action) => {
                 case 'phone-tel':
 
                     //  Валидация данных
-                    const phoneTel = validator.isMobilePhone(action.value, ['ru-RU']);
+                    const phoneTel = validator.isMobilePhone(action.value, 'any');
 
                     if (phoneTel) {
                         return {
@@ -136,7 +136,7 @@ const modal = (state = initToggleComp, action) => {
                 case 'form-tel':
 
                     //  Валидация данных
-                    const formTel = validator.isMobilePhone(action.value, ['ru-RU']);
+                    const formTel = validator.isMobilePhone(action.value, 'any');
 
                     if (formTel) {
                         return {
